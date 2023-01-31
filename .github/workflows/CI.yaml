@@ -1,0 +1,18 @@
+name: Containers Continuous-Integration
+run-name: CI ${{ github.repository }} - ${{ github.ref }} job 🚀
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+jobs:
+  Build-Test-Container-Setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Build application Docker image
+        run: docker build avalanchego/ --file avalanchego/Dockerfile --tag avalanchego:${{ github.ref_name }}
+
+      - name: Test docker-compose 🚀
+        run: docker-compose -f avalanchego/docker-compose.yaml up -d --build

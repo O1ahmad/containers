@@ -1,0 +1,26 @@
+version: "3.4"
+
+services:
+  avalanchego:
+    build: .
+    container_name: avalanchego
+    environment:
+      RUN_ARGS: "--config-file=/config/config.json --chain-config-dir=/config/C"
+    ports:
+      - 9650:9650/tcp
+    volumes:
+      - ./config/config.json:/config/config.json
+      - ./config/C/config.json:/config/C/config.json
+    restart: unless-stopped
+
+  avalanchego-local:
+    build: .
+    container_name: avalanchego-local
+    environment:
+      RUN_ARGS: "--config-file=/config/config.json --chain-config-dir=/config/C"
+    ports:
+      - 19650:9650/tcp
+    volumes:
+      - ./config/local/config.json:/config/config.json
+      - ./config/local/C/config.json:/config/C/config.json
+    restart: unless-stopped

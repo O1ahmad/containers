@@ -4,8 +4,6 @@ on:
   push:
     branches: [ main ]
   pull_request:
-env:
-  AVAX_VERSION: v1.9.7
 jobs:
   Build-Test-Container-Setup:
     runs-on: ubuntu-latest
@@ -20,12 +18,6 @@ jobs:
           dir_names: "true"
           dir_names_max_depth: "1"
           files_ignore: .github
-
-      - name: List changed DIRs
-        run: |
-          for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            echo $dir
-          done
 
       - name: Build modified application Docker images
         run: |

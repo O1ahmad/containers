@@ -3,8 +3,6 @@ run-name: CD ${{ github.repository }} - ${{ github.ref }} job 🚀
 on:
   push:
     branches: [ main ]
-env:
-  AVAX_VERSION: v1.9.7
 jobs:
   Build-Deploy-Image:
     runs-on: ubuntu-latest
@@ -12,8 +10,20 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
 
-      - name: Build application Docker image
-        run: docker build avalanchego/ --file avalanchego/Dockerfile --build-arg VERSION=$AVAX_VERSION --tag 0labs/avalanchego:$AVAX_VERSION
+      - name: Identify changed application subdirectories
+        id: changed-dirs
+        uses: tj-actions/changed-files@v35
+        with:
+          dir_names: "true"
+          dir_names_max_depth: "1"
+          files_ignore: .github
+
+      - name: Build modified application Docker images
+        run: |
+          for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
+            version=$(cat $dir/version.txt)
+            docker build $dir/ --file $dir/Dockerfile --build-arg VERSION=$version --tag 0labs/$dir:$version
+          done
 
       - name: Login to Dockerhub for release
         env:
@@ -22,4 +32,8 @@ jobs:
         run: echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USER --password-stdin
 
       - name: Publish Docker image
-        run: docker push 0labs/avalanchego:$AVAX_VERSION
+        run: |
+          for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
+            version=$(cat $dir/version.txt)
+            docker push 0labs/$dir:$version
+          done

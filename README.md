@@ -11,7 +11,7 @@ Containerized web3 and cloud-native applications
 
 | name | description | link |
 | :---: | :---: | :---: |
-| **avalanchego** | Go implementation of an Avalanche node | [![avalanchego](https://img.shields.io/docker/pulls/0labs/avalanchego?style=flat)](https://hub.docker.com/repository/docker/0labs/avalanchego) |
+| [avalanchego](./avalanchego) | Go implementation of an Avalanche node | [![avalanchego](https://img.shields.io/docker/pulls/0labs/avalanchego?style=flat)](https://hub.docker.com/repository/docker/0labs/avalanchego) |
 
 License
 -------

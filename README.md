@@ -9,9 +9,9 @@ Containerized web3 and cloud-native applications
 
 #### Containers
 
-| name | description|
-| :---: | :---: |
-| [Docker Pulls](https://img.shields.io/docker/pulls/0labs/lodestar?style=flat)](https://hub.docker.com/repository/docker/0labs/lodestar) | Go implementation of an Avalanche node |
+| name | description | link |
+| :---: | :---: | :---: |
+| **avalanchego** | Go implementation of an Avalanche node | [![avalanchego](https://img.shields.io/docker/pulls/0labs/avalanchego?style=flat)](https://hub.docker.com/repository/docker/0labs/avalanchego) |
 
 License
 -------

@@ -25,4 +25,5 @@ services:
       - 19650:9650/tcp
     volumes:
       - ./config/local:/config
+      - "${host_data_dir:-avalanchego-data}:/root/.avalanchego"
     restart: unless-stopped

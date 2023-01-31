@@ -1,0 +1,25 @@
+name: Containers Continuous-Deployment
+run-name: CD ${{ github.repository }} - ${{ github.ref }} job 🚀
+on:
+  push:
+    branches: [ main ]
+env:
+  AVAX_VERSION: v1.9.7
+jobs:
+  Build-Deploy-Image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Build application Docker image
+        run: docker build avalanchego/ --file avalanchego/Dockerfile --build-arg VERSION=$AVAX_VERSION --tag 0labs/avalanchego:$AVAX_VERSION
+
+      - name: Login to Dockerhub for release
+        env:
+          DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USR }}
+          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PWD }}
+        run: echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USER --password-stdin
+
+      - name: Publish Docker image
+        run: docker push 0labs/avalanchego:$AVAX_VERSION

@@ -21,8 +21,10 @@ jobs:
       - name: Build modified application Docker images
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            version=$(cat $dir/version.txt)
-            docker build $dir/ --file $dir/Dockerfile --build-arg VERSION=$version --tag 0labs/$dir:$version
+            if [[ $dir != *.* ]] ; then
+              version=$(cat $dir/version.txt)
+              docker build $dir/ --file $dir/Dockerfile --build-arg VERSION=$version --tag 0labs/$dir:$version
+            fi
           done
 
       - name: Login to Dockerhub for release
@@ -34,6 +36,8 @@ jobs:
       - name: Publish Docker image
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            version=$(cat $dir/version.txt)
-            docker push 0labs/$dir:$version
+            if [[ $dir != *.* ]] ; then
+              version=$(cat $dir/version.txt)
+              docker push 0labs/$dir:$version
+            fi
           done

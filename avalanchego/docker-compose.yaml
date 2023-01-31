@@ -1,5 +1,8 @@
 version: "3.4"
 
+volumes:
+  avalanchego-data:
+
 services:
   avalanchego:
     build: .
@@ -9,8 +12,8 @@ services:
     ports:
       - 9650:9650/tcp
     volumes:
-      - ./config/config.json:/config/config.json
-      - ./config/C/config.json:/config/C/config.json
+      - ./config/mainnet:/config
+      - "${host_data_dir:-avalanchego-data}:/root/.avalanchego"
     restart: unless-stopped
 
   avalanchego-local:
@@ -21,6 +24,5 @@ services:
     ports:
       - 19650:9650/tcp
     volumes:
-      - ./config/local/config.json:/config/config.json
-      - ./config/local/C/config.json:/config/C/config.json
+      - ./config/local:/config
     restart: unless-stopped

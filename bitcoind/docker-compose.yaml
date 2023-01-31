@@ -1,0 +1,31 @@
+version: "3.4"
+
+volumes:
+  bitcoind-data:
+
+services:
+  bitcoind:
+    build: .
+    container_name: bitcoind
+    environment:
+      RUN_ARGS: "-conf=/config/bitcoin.conf -datadir=/data"
+    ports:
+      - 8332:8332/tcp
+      - 8334:8334/tcp
+    volumes:
+      - ./config/mainnet:/config
+      - "${host_data_dir:-bitcoind-data}:/data"
+    restart: unless-stopped
+
+  bitcoind-local:
+    build: .
+    container_name: bitcoind-local
+    environment:
+      RUN_ARGS: "-conf=/config/bitcoin.conf -datadir=/data"
+    ports:
+      - 28332:8332/tcp
+      - 28334:8334/tcp
+    volumes:
+      - ./config/local:/config
+      - "${host_data_dir:-bitcoind-data}:/data"
+    restart: unless-stopped

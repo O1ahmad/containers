@@ -1,6 +1,6 @@
 # O1 Containers Collection
 
-Containerized web3 and cloud-native applications
+Containerized Web3 and Cloud-Native applications
 
 **Overview**
   - [Containers](#containers)

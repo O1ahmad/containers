@@ -3,7 +3,7 @@ set -eo pipefail
 
 DIR=/docker-entrypoint.d
 if [[ -d "$DIR" ]] ; then
-  echo "Executing custom entrypoint scripts in $DIR"
+  echo "Executing custom entrypoint scripts..."
   /bin/run-parts --exit-on-error "$DIR"
 fi
 

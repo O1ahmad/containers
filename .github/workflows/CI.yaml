@@ -4,8 +4,6 @@ on:
   push:
     branches: [ main ]
   pull_request:
-env:
-  AVAX_VERSION: v1.9.7
 jobs:
   Build-Test-Container-Setup:
     runs-on: ubuntu-latest
@@ -13,9 +11,23 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
 
-      - name: Build application Docker image
-        run: docker build avalanchego/ --file avalanchego/Dockerfile --build-arg VERSION=$AVAX_VERSION --tag 0labs/avalanchego:$AVAX_VERSION
+      - name: Identify changed application subdirectories
+        id: changed-dirs
+        uses: tj-actions/changed-files@v35
+        with:
+          dir_names: "true"
+          dir_names_max_depth: "1"
+          files_ignore: .github
 
-      - name: Test docker-compose 🚀
-        run: docker-compose -f avalanchego/docker-compose.yaml up -d --build
+      - name: Build modified application Docker images
+        run: |
+          for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
+            version=$(cat $dir/version.txt)
+            docker build $dir/ --file $dir/Dockerfile --build-arg VERSION=$version --tag 0labs/$dir:$version
+          done
 
+      - name: Test application docker-compose setups
+        run: |
+          for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
+            docker-compose -f $dir/docker-compose.yaml up -d --build
+          done

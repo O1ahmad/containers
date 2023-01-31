@@ -1,0 +1,9 @@
+{
+    "network-id": "local",
+    "pruning-enabled": false,
+    "staking-enabled": false,
+    "http-host": "0.0.0.0",
+    "snow-sample-size": 1,
+    "snow-quorum-size": 1,
+    "snow-mixed-query-num-push-vdr": 1
+}

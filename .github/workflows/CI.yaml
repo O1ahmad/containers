@@ -19,11 +19,3 @@ jobs:
       - name: Test docker-compose 🚀
         run: docker-compose -f avalanchego/docker-compose.yaml up -d --build
 
-      - name: Login to Dockerhub for release
-        env:
-          DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USR }}
-          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PWD }}
-        run: echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USER --password-stdin
-
-      - name: Publish Docker image
-        run: docker push 0labs/avalanchego:$AVAX_VERSION

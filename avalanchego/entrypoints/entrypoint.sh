@@ -7,5 +7,5 @@ if [[ -d "$DIR" ]] ; then
   /bin/run-parts --exit-on-error "$DIR"
 fi
 
-echo "Starting avalanchego, with arguments: ${RUN_ARGS:-None}"
+echo "Starting avalanchego - run arguments: ${RUN_ARGS:-None}"
 exec avalanchego ${RUN_ARGS}

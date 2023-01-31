@@ -22,7 +22,7 @@ jobs:
       - name: Build modified application Docker images
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            if [[ $dir != *.* ]] ; then
+            if [[ $dir != "." ]] ; then
               version=$(cat $dir/version.txt)
               docker build $dir/ --file $dir/Dockerfile --build-arg VERSION=$version --tag 0labs/$dir:$version
             fi
@@ -31,7 +31,7 @@ jobs:
       - name: Test application docker-compose setups
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            if [[ $dir != *.* ]] ; then
+            if [[ $dir != "." ]] ; then
               docker-compose -f $dir/docker-compose.yaml up -d --build
             fi
           done

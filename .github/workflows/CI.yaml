@@ -17,21 +17,20 @@ jobs:
         with:
           dir_names: "true"
           dir_names_max_depth: "1"
-          files_ignore: .github
+          dir_names_exclude_root: "true"
+          files_ignore: |
+            .github
+            docs
 
       - name: Build modified application Docker images
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            if [[ $dir != "." ]] ; then
-              version=$(cat $dir/version.txt)
-              docker build $dir/ --file $dir/Dockerfile --build-arg VERSION=$version --tag 0labs/$dir:$version
-            fi
+            version=$(cat $dir/version.txt)
+            docker build $dir/ --file $dir/Dockerfile --build-arg VERSION=$version --tag 0labs/$dir:$version
           done
 
       - name: Test application docker-compose setups
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            if [[ $dir != "." ]] ; then
-              docker-compose -f $dir/docker-compose.yaml up -d --build
-            fi
+            docker-compose -f $dir/docker-compose.yaml up -d --build
           done

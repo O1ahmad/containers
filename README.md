@@ -10,7 +10,7 @@ Containerized Web3 and Cloud-Native applications
 
 #### Containers
 
-| name | description | link |
+| name | description | image |
 | :---: | :---: | :---: |
 | [avalanchego](./avalanchego) | Go implementation of an Avalanche node | [![avalanchego](https://img.shields.io/docker/v/0labs/avalanchego)](https://hub.docker.com/repository/docker/0labs/avalanchego) |
 | [bitcoind](./bitcoind) | Client software for running a Bitcoin Core node | [![bitcoind](https://img.shields.io/docker/v/0labs/bitcoind)](https://hub.docker.com/repository/docker/0labs/bitcoind) |

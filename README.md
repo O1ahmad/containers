@@ -31,7 +31,7 @@ docker run --env RUN_ARGS="--help" <image>
 Mount customized application configuration files to locations of your choosing - can be used in tandem with `RUN_ARGS` to specify where configuration files are loaded from.
 
 ```
-docker run --volume ./config/mainnet:/config <image>
+docker run --volume ./config/mainnet:/config <image> --env RUN_ARGS=--config-dir=/config
 ```
 
 ##### custom entrypoints

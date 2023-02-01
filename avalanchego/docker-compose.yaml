@@ -12,18 +12,6 @@ services:
     ports:
       - 9650:9650/tcp
     volumes:
-      - ./config/mainnet:/config
-      - "${host_data_dir:-avalanchego-data}:/root/.avalanchego"
-    restart: unless-stopped
-
-  avalanchego-local:
-    build: .
-    container_name: avalanchego-local
-    environment:
-      RUN_ARGS: "--config-file=/config/config.json --chain-config-dir=/config/C"
-    ports:
-      - 19650:9650/tcp
-    volumes:
-      - ./config/local:/config
+      - ./config/${avax_network:-mainnet}:/config
       - "${host_data_dir:-avalanchego-data}:/root/.avalanchego"
     restart: unless-stopped

@@ -1,0 +1,31 @@
+version: "3.4"
+
+volumes:
+  bitcoin-abc-data:
+
+services:
+  bitcoin-abc:
+    build: .
+    container_name: bitcoin-abc
+    environment:
+      RUN_ARGS: "-conf=/config/bitcoin-abc.conf -datadir=/data"
+    ports:
+      - 18332:8332/tcp
+      - 18334:8334/tcp
+    volumes:
+      - ./config/mainnet:/config
+      - "${host_data_dir:-bitcoin-abc-data}:/data"
+    restart: unless-stopped
+
+  bitcoind-local:
+    build: .
+    container_name: bitcoin-abc-local
+    environment:
+      RUN_ARGS: "-conf=/config/bitcoin-abc.conf -datadir=/data"
+    ports:
+      - 38332:8332/tcp
+      - 38334:8334/tcp
+    volumes:
+      - ./config/local:/config
+      - "${host_data_dir:-bitcoin-abc-data}:/data"
+    restart: unless-stopped

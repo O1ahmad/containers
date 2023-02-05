@@ -15,7 +15,8 @@ Containerized Web3 and Cloud-Native applications
 | [avalanchego](./avalanchego) | Go implementation of an Avalanche node | [![avalanchego](https://img.shields.io/docker/v/0labs/avalanchego)](https://hub.docker.com/repository/docker/0labs/avalanchego) |
 | [bitcoind](./bitcoind) | Client software for running a Bitcoin Core node | [![bitcoind](https://img.shields.io/docker/v/0labs/bitcoind)](https://hub.docker.com/repository/docker/0labs/bitcoind) |
 | [bitcoin-abcd](./bitcoin-abcd) | Node software and infrastructure for the Bitcoin Cash/eCash project | [![bitcoin-abcd](https://img.shields.io/docker/v/0labs/bitcoin-abcd?color=blue)](https://hub.docker.com/repository/docker/0labs/bitcoin-abcd) |
-| [dogecoind](./bitcoin-abcd) | Node software and infrastructure for the Bitcoin Cash/eCash project | [![bitcoin-abcd](https://img.shields.io/docker/v/0labs/dogecoind?color=blue)](https://hub.docker.com/repository/docker/0labs/dogecoind) |
+| [dogecoind](./bitcoin-abcd) | Node software and infrastructure for the Bitcoin Cash/eCash project | [![dogecoind](https://img.shields.io/docker/v/0labs/dogecoind?color=blue)](https://hub.docker.com/repository/docker/0labs/dogecoind) |
+| [erigon](./erigon) | an implementation of Ethereum (execution client), on the efficiency frontier, written in Go | [![erigon](https://img.shields.io/docker/v/0labs/erigon?color=blue)](https://hub.docker.com/repository/docker/0labs/erigon) |
 
 #### Options
 

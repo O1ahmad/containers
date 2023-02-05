@@ -1,0 +1,20 @@
+version: "3.4"
+
+volumes:
+  gaia-data:
+
+services:
+  gaia:
+    build: .
+    container_name: gaia
+    environment:
+      CHAIN_ID: "${GAIA_CHAIN_ID:-local}"
+      RUN_ARGS: "--x-crisis-skip-assert-invariants"
+    ports:
+      - 26657:26657/tcp
+      - 1317:1317/tcp
+      - 26660:26660/tcp
+    volumes:
+      - "./config/${network:-mainnet}:/config"
+      - "${host_data_dir:-gaia-data}:/root/.gaia"
+    restart: unless-stopped

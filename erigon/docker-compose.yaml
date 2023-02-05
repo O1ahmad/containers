@@ -1,0 +1,21 @@
+# @format
+
+version: "3.4"
+
+volumes:
+  erigon-data:
+
+services:
+  erigon:
+    build: .
+    container_name: erigon
+    environment:
+      RUN_ARGS: "--config=/config/erigon.yaml"
+    ports:
+      - 8545:8545/tcp
+      - 8551:8551/tcp
+      - 6060:6060/tcp
+    volumes:
+      - ./config/${network:-mainnet}:/config
+      - "${host_data_dir:-erigon-data}:/data"
+    restart: unless-stopped

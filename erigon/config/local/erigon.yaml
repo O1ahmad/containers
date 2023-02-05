@@ -1,0 +1,6 @@
+datadir: /data
+chain: dev
+http.addr: 0.0.0.0
+http.api: ["eth", "erigon", "web3", "debug", "trace", "txpool", "net"]
+metrics: true
+metrics.addr: 0.0.0.0

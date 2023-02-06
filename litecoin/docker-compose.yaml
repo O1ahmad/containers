@@ -1,0 +1,17 @@
+version: "3.4"
+
+volumes:
+  litecoind-data:
+
+services:
+  litecoind:
+    build: .
+    container_name: litecoind
+    environment:
+      RUN_ARGS: "-conf=/config/litecoin.conf -datadir=/data -rpcallowip=0.0.0.0/0"
+    ports:
+      - 9332:9332/tcp
+    volumes:
+      - ./config/${network:-mainnet}:/config
+      - "${host_data_dir:-litecoind-data}:/data"
+    restart: unless-stopped

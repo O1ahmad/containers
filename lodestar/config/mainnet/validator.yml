@@ -1,0 +1,8 @@
+network: mainnet
+metrics: true
+metrics.address: 0.0.0.0
+logLevel: info
+beaconNodes: ["http://localhost:9596"]
+
+keymanager: true
+doppelgangerProtectionEnabled: true

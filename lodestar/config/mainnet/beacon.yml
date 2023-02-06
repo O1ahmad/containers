@@ -1,0 +1,7 @@
+network: mainnet
+listenAddress: 0.0.0.0
+rest.address: 0.0.0.0
+metrics: true
+metrics.address: 0.0.0.0
+logLevel: info
+execution.urls: ["http://localhost:8545"]

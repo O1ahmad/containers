@@ -1,0 +1,8 @@
+network: dev
+metrics: true
+metrics.address: 0.0.0.0
+logLevel: debug
+beaconNodes: ["http://lodestar-beacon:9596"]
+
+keymanager: true
+doppelgangerProtectionEnabled: false

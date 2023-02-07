@@ -18,6 +18,7 @@ Containerized Web3 and Cloud-Native applications
 | [dogecoind](./bitcoin-abcd) | Node software for the Dogecoin community driven cryptocurrency project | [![dogecoind](https://img.shields.io/docker/v/0labs/dogecoind?color=blue)](https://hub.docker.com/repository/docker/0labs/dogecoind) |
 | [erigon](./erigon) | an implementation of Ethereum (execution client), on the efficiency frontier, written in Go | [![erigon](https://img.shields.io/docker/v/0labs/erigon?color=blue)](https://hub.docker.com/repository/docker/0labs/erigon) |
 | [litecoind](./litecoin) | Node software for the Litecoin digital currency payments network | [![litecoin](https://img.shields.io/docker/v/0labs/litecoin?color=blue)](https://hub.docker.com/repository/docker/0labs/litecoin) |
+| [lodestar](./lodestar) | an open-source Ethereum Consensus client and Typescript ecosystem | [![lodestar](https://img.shields.io/docker/v/0labs/lodestar?color=blue)](https://hub.docker.com/repository/docker/0labs/lodestar) |
 
 #### Options
 

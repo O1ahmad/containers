@@ -12,12 +12,15 @@ RUN apt update && apt install --yes --no-install-recommends \
   git \
   g++ \
   make \
-  python3
+  python3 \
+  tini
 
 WORKDIR /
 
 RUN git clone --depth 1 --branch ${VERSION} https://github.com/ChainSafe/lodestar.git
 RUN cd lodestar && yarn install --ignore-optional && yarn run build
+
+ENV PATH="$PATH:/lodestar"
 
 COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 
@@ -30,3 +33,4 @@ WORKDIR /lodestar
 EXPOSE 9596   9000  8008
 
 ENTRYPOINT ["/entrypoint.sh"]
+CMD ["lodestar"]

@@ -19,6 +19,8 @@ FROM debian:stable
 
 ARG VERSION
 
+RUN apt-get update && apt-get install --yes --no-install-recommends tini
+
 COPY --from=setup /bitcoin-abcd/bitcoin-abc-${VERSION}/bin /usr/local/bin
 COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 
@@ -29,3 +31,4 @@ COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 EXPOSE 8332   18446  8334
 
 ENTRYPOINT ["/entrypoint.sh"]
+CMD ["bitcoind"]

@@ -19,6 +19,8 @@ FROM debian:stable
 
 ARG VERSION
 
+RUN apt update && apt install --yes --no-install-recommends tini
+
 COPY --from=setup /avalanche/avalanchego-${VERSION}/ /usr/local/bin
 COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 
@@ -29,3 +31,4 @@ COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 EXPOSE 9650 9651
 
 ENTRYPOINT ["/entrypoint.sh"]
+CMD ["avalanchego"]

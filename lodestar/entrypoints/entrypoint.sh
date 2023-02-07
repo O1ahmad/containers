@@ -8,4 +8,4 @@ if [[ -d "$DIR" ]] ; then
 fi
 
 echo "Starting lodestar - run arguments: ${RUN_ARGS:-None}"
-cd /lodestar && exec ./lodestar ${RUN_ARGS}
+exec /usr/bin/tini -g -- $@ ${RUN_ARGS}

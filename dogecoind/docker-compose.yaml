@@ -10,8 +10,8 @@ services:
     environment:
       RUN_ARGS: "-conf=/config/dogecoin.conf -datadir=/data"
     ports:
-      - 8332:8332/tcp
-      - 8334:8334/tcp
+      - 28332:8332/tcp
+      - 28334:8334/tcp
     volumes:
       - ./config/${network:-mainnet}:/config
       - "${host_data_dir:-dogecoind-data}:/data"

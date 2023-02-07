@@ -19,6 +19,8 @@ FROM debian:stable
 
 ARG VERSION
 
+RUN apt-get update && apt-get install --yes --no-install-recommends tini
+
 COPY --from=setup /dogecoind/dogecoin-${VERSION}/bin /usr/local/bin
 COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 
@@ -29,3 +31,4 @@ COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 EXPOSE 22555 28334 22556
 
 ENTRYPOINT ["/entrypoint.sh"]
+CMD ["dogecoind"]

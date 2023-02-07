@@ -8,4 +8,4 @@ if [[ -d "$DIR" ]] ; then
 fi
 
 echo "Starting avalanchego - run arguments: ${RUN_ARGS:-None}"
-exec avalanchego ${RUN_ARGS}
+exec /usr/bin/tini -g -- $@ ${RUN_ARGS}

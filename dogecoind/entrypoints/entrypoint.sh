@@ -8,4 +8,4 @@ if [[ -d "$DIR" ]] ; then
 fi
 
 echo "Starting dogecoind - run arguments: ${RUN_ARGS:-None}"
-exec dogecoind ${RUN_ARGS}
+exec /usr/bin/tini -g -- $@ ${RUN_ARGS}

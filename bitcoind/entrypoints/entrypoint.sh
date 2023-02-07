@@ -8,4 +8,4 @@ if [[ -d "$DIR" ]] ; then
 fi
 
 echo "Starting bitcoind - run arguments: ${RUN_ARGS:-None}"
-exec bitcoind ${RUN_ARGS}
+exec /usr/bin/tini -g -- $@ ${RUN_ARGS}

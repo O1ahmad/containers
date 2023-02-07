@@ -17,6 +17,8 @@ RUN git clone -b ${VERSION} --recurse-submodules -j8 --progress https://github.c
 # ******* Stage: release ******* #
 FROM debian:stable
 
+RUN apt-get update && apt-get install --yes --no-install-recommends tini
+
 COPY --from=setup /erigon/build/bin/erigon /usr/local/bin
 COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 
@@ -27,3 +29,4 @@ COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 EXPOSE  8545  30303  8551  6060
 
 ENTRYPOINT ["/entrypoint.sh"]
+CMD ["erigon"]

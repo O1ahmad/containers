@@ -8,4 +8,4 @@ if [[ -d "$DIR" ]] ; then
 fi
 
 echo "Starting litecoind - run arguments: ${RUN_ARGS:-None}"
-exec litecoind ${RUN_ARGS}
+exec /usr/bin/tini -g -- $@ ${RUN_ARGS}

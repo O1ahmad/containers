@@ -12,6 +12,6 @@ services:
     ports:
       - 9650:9650/tcp
     volumes:
-      - ./config/${avax_network:-mainnet}:/config
+      - ./config/${network:-mainnet}:/config
       - "${host_data_dir:-avalanchego-data}:/root/.avalanchego"
     restart: unless-stopped

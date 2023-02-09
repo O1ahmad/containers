@@ -1,4 +1,4 @@
-ARG VERSION=v1.9.7
+ARG VERSION=v1.9.8
 
 # ******* Stage: setup ******* #
 FROM debian:stable AS setup

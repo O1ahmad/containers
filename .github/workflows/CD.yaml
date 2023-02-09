@@ -24,7 +24,7 @@ jobs:
       - name: Build modified application Docker images
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            version=$(cat $dir/version.txt)
+            version=$(cat $dir/meta.yml | yq .version | sed "s/\"//g")
             docker build $dir/ --file $dir/Dockerfile --build-arg VERSION=$version --tag 0labs/$dir:$version
           done
 
@@ -37,7 +37,7 @@ jobs:
       - name: Publish Docker image
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            version=$(cat $dir/version.txt)
+            version=$(cat $dir/meta.yml | yq .version | sed "s/\"//g")
             docker push 0labs/$dir:$version
           done
 
@@ -51,7 +51,7 @@ jobs:
 
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
             export name=$dir
-            export version=$(cat $dir/version.txt)
+            version=$(cat $dir/meta.yml | yq .version | sed "s/\"//g")
 
             [ ! -d $dir/docs/$version ] && mkdir -p $dir/docs/$version
 

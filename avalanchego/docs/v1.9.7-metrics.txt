@@ -99,7 +99,7 @@ avalanche_C_db_batch_delete_size_count 1
 avalanche_C_db_batch_delete_size_sum 80
 # HELP avalanche_C_db_batch_delete_sum Sum of time (in ns) of a batch_delete
 # TYPE avalanche_C_db_batch_delete_sum gauge
-avalanche_C_db_batch_delete_sum 700
+avalanche_C_db_batch_delete_sum 500
 # HELP avalanche_C_db_batch_inner_count Total # of observations of time (in ns) of a batch_inner
 # TYPE avalanche_C_db_batch_inner_count counter
 avalanche_C_db_batch_inner_count 0
@@ -117,7 +117,7 @@ avalanche_C_db_batch_put_size_count 8
 avalanche_C_db_batch_put_size_sum 914
 # HELP avalanche_C_db_batch_put_sum Sum of time (in ns) of a batch_put
 # TYPE avalanche_C_db_batch_put_sum gauge
-avalanche_C_db_batch_put_sum 38200
+avalanche_C_db_batch_put_sum 6400
 # HELP avalanche_C_db_batch_replay_count Total # of observations of time (in ns) of a batch_replay
 # TYPE avalanche_C_db_batch_replay_count counter
 avalanche_C_db_batch_replay_count 0
@@ -129,7 +129,7 @@ avalanche_C_db_batch_replay_sum 0
 avalanche_C_db_batch_reset_count 10
 # HELP avalanche_C_db_batch_reset_sum Sum of time (in ns) of a batch_reset
 # TYPE avalanche_C_db_batch_reset_sum gauge
-avalanche_C_db_batch_reset_sum 3700
+avalanche_C_db_batch_reset_sum 3000
 # HELP avalanche_C_db_batch_size_count Total # of observations of time (in ns) of a batch_size
 # TYPE avalanche_C_db_batch_size_count counter
 avalanche_C_db_batch_size_count 3
@@ -147,7 +147,7 @@ avalanche_C_db_batch_write_size_count 10
 avalanche_C_db_batch_write_size_sum 1066
 # HELP avalanche_C_db_batch_write_sum Sum of time (in ns) of a batch_write
 # TYPE avalanche_C_db_batch_write_sum gauge
-avalanche_C_db_batch_write_sum 96500
+avalanche_C_db_batch_write_sum 64200
 # HELP avalanche_C_db_close_count Total # of observations of time (in ns) of a close
 # TYPE avalanche_C_db_close_count counter
 avalanche_C_db_close_count 0
@@ -171,7 +171,7 @@ avalanche_C_db_delete_size_count 4
 avalanche_C_db_delete_size_sum 319
 # HELP avalanche_C_db_delete_sum Sum of time (in ns) of a delete
 # TYPE avalanche_C_db_delete_sum gauge
-avalanche_C_db_delete_sum 34901
+avalanche_C_db_delete_sum 23100
 # HELP avalanche_C_db_get_count Total # of observations of time (in ns) of a get
 # TYPE avalanche_C_db_get_count counter
 avalanche_C_db_get_count 32
@@ -183,7 +183,7 @@ avalanche_C_db_get_size_count 32
 avalanche_C_db_get_size_sum 3956
 # HELP avalanche_C_db_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_C_db_get_sum gauge
-avalanche_C_db_get_sum 130501
+avalanche_C_db_get_sum 69400
 # HELP avalanche_C_db_has_count Total # of observations of time (in ns) of a has
 # TYPE avalanche_C_db_has_count counter
 avalanche_C_db_has_count 3
@@ -195,7 +195,7 @@ avalanche_C_db_has_size_count 3
 avalanche_C_db_has_size_sum 240
 # HELP avalanche_C_db_has_sum Sum of time (in ns) of a has
 # TYPE avalanche_C_db_has_sum gauge
-avalanche_C_db_has_sum 9200
+avalanche_C_db_has_sum 8900
 # HELP avalanche_C_db_health_check_count Total # of observations of time (in ns) of a health_check
 # TYPE avalanche_C_db_health_check_count counter
 avalanche_C_db_health_check_count 0
@@ -207,7 +207,7 @@ avalanche_C_db_health_check_sum 0
 avalanche_C_db_iterator_error_count 3
 # HELP avalanche_C_db_iterator_error_sum Sum of time (in ns) of a iterator_error
 # TYPE avalanche_C_db_iterator_error_sum gauge
-avalanche_C_db_iterator_error_sum 1100
+avalanche_C_db_iterator_error_sum 900
 # HELP avalanche_C_db_iterator_key_count Total # of observations of time (in ns) of a iterator_key
 # TYPE avalanche_C_db_iterator_key_count counter
 avalanche_C_db_iterator_key_count 0
@@ -225,13 +225,13 @@ avalanche_C_db_iterator_next_size_count 5
 avalanche_C_db_iterator_next_size_sum 0
 # HELP avalanche_C_db_iterator_next_sum Sum of time (in ns) of a iterator_next
 # TYPE avalanche_C_db_iterator_next_sum gauge
-avalanche_C_db_iterator_next_sum 20700
+avalanche_C_db_iterator_next_sum 7800
 # HELP avalanche_C_db_iterator_release_count Total # of observations of time (in ns) of a iterator_release
 # TYPE avalanche_C_db_iterator_release_count counter
 avalanche_C_db_iterator_release_count 5
 # HELP avalanche_C_db_iterator_release_sum Sum of time (in ns) of a iterator_release
 # TYPE avalanche_C_db_iterator_release_sum gauge
-avalanche_C_db_iterator_release_sum 7900
+avalanche_C_db_iterator_release_sum 5100
 # HELP avalanche_C_db_iterator_value_count Total # of observations of time (in ns) of a iterator_value
 # TYPE avalanche_C_db_iterator_value_count counter
 avalanche_C_db_iterator_value_count 0
@@ -243,13 +243,13 @@ avalanche_C_db_iterator_value_sum 0
 avalanche_C_db_new_batch_count 9
 # HELP avalanche_C_db_new_batch_sum Sum of time (in ns) of a new_batch
 # TYPE avalanche_C_db_new_batch_sum gauge
-avalanche_C_db_new_batch_sum 18601
+avalanche_C_db_new_batch_sum 17800
 # HELP avalanche_C_db_new_iterator_count Total # of observations of time (in ns) of a new_iterator
 # TYPE avalanche_C_db_new_iterator_count counter
 avalanche_C_db_new_iterator_count 5
 # HELP avalanche_C_db_new_iterator_sum Sum of time (in ns) of a new_iterator
 # TYPE avalanche_C_db_new_iterator_sum gauge
-avalanche_C_db_new_iterator_sum 24800
+avalanche_C_db_new_iterator_sum 20200
 # HELP avalanche_C_db_put_count Total # of observations of time (in ns) of a put
 # TYPE avalanche_C_db_put_count counter
 avalanche_C_db_put_count 10
@@ -261,7 +261,7 @@ avalanche_C_db_put_size_count 10
 avalanche_C_db_put_size_sum 2156
 # HELP avalanche_C_db_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_C_db_put_sum gauge
-avalanche_C_db_put_sum 133400
+avalanche_C_db_put_sum 112201
 # HELP avalanche_C_db_read_size_count Total # of observations of bytes passed in a read call
 # TYPE avalanche_C_db_read_size_count counter
 avalanche_C_db_read_size_count 40
@@ -306,7 +306,7 @@ avalanche_C_handler_accepted_count 1
 avalanche_C_handler_accepted_frontier_count 1
 # HELP avalanche_C_handler_accepted_frontier_sum Sum of time (in ns) of processing a accepted_frontier
 # TYPE avalanche_C_handler_accepted_frontier_sum gauge
-avalanche_C_handler_accepted_frontier_sum 53900
+avalanche_C_handler_accepted_frontier_sum 40000
 # HELP avalanche_C_handler_accepted_state_summary_count Total # of observations of time (in ns) of processing a accepted_state_summary
 # TYPE avalanche_C_handler_accepted_state_summary_count counter
 avalanche_C_handler_accepted_state_summary_count 0
@@ -315,7 +315,7 @@ avalanche_C_handler_accepted_state_summary_count 0
 avalanche_C_handler_accepted_state_summary_sum 0
 # HELP avalanche_C_handler_accepted_sum Sum of time (in ns) of processing a accepted
 # TYPE avalanche_C_handler_accepted_sum gauge
-avalanche_C_handler_accepted_sum 262803
+avalanche_C_handler_accepted_sum 190101
 # HELP avalanche_C_handler_ancestors_count Total # of observations of time (in ns) of processing a ancestors
 # TYPE avalanche_C_handler_ancestors_count counter
 avalanche_C_handler_ancestors_count 0
@@ -396,7 +396,7 @@ avalanche_C_handler_connected_subnet_count 0
 avalanche_C_handler_connected_subnet_sum 0
 # HELP avalanche_C_handler_connected_sum Sum of time (in ns) of processing a connected
 # TYPE avalanche_C_handler_connected_sum gauge
-avalanche_C_handler_connected_sum 592405
+avalanche_C_handler_connected_sum 445103
 # HELP avalanche_C_handler_cross_chain_app_request_count Total # of observations of time (in ns) of processing a cross_chain_app_request
 # TYPE avalanche_C_handler_cross_chain_app_request_count counter
 avalanche_C_handler_cross_chain_app_request_count 0
@@ -444,7 +444,7 @@ avalanche_C_handler_get_accepted_frontier_failed_count 0
 avalanche_C_handler_get_accepted_frontier_failed_sum 0
 # HELP avalanche_C_handler_get_accepted_frontier_sum Sum of time (in ns) of processing a get_accepted_frontier
 # TYPE avalanche_C_handler_get_accepted_frontier_sum gauge
-avalanche_C_handler_get_accepted_frontier_sum 20601
+avalanche_C_handler_get_accepted_frontier_sum 11800
 # HELP avalanche_C_handler_get_accepted_state_summary_count Total # of observations of time (in ns) of processing a get_accepted_state_summary
 # TYPE avalanche_C_handler_get_accepted_state_summary_count counter
 avalanche_C_handler_get_accepted_state_summary_count 0
@@ -459,7 +459,7 @@ avalanche_C_handler_get_accepted_state_summary_failed_sum 0
 avalanche_C_handler_get_accepted_state_summary_sum 0
 # HELP avalanche_C_handler_get_accepted_sum Sum of time (in ns) of processing a get_accepted
 # TYPE avalanche_C_handler_get_accepted_sum gauge
-avalanche_C_handler_get_accepted_sum 9600
+avalanche_C_handler_get_accepted_sum 8200
 # HELP avalanche_C_handler_get_ancestors_count Total # of observations of time (in ns) of processing a get_ancestors
 # TYPE avalanche_C_handler_get_ancestors_count counter
 avalanche_C_handler_get_ancestors_count 0
@@ -543,7 +543,7 @@ avalanche_C_handler_state_summary_frontier_sum 0
 avalanche_C_handler_timeout_count 1
 # HELP avalanche_C_handler_timeout_sum Sum of time (in ns) of processing a timeout
 # TYPE avalanche_C_handler_timeout_sum gauge
-avalanche_C_handler_timeout_sum 1.184711e+06
+avalanche_C_handler_timeout_sum 172301
 # HELP avalanche_C_handler_unprocessed_msgs_accepted_count Number of of accepted messages in the message queue.
 # TYPE avalanche_C_handler_unprocessed_msgs_accepted_count gauge
 avalanche_C_handler_unprocessed_msgs_accepted_count 0
@@ -642,7 +642,7 @@ avalanche_C_lat_accepted_count 1
 avalanche_C_lat_accepted_frontier_count 1
 # HELP avalanche_C_lat_accepted_frontier_sum Sum of time (in ns) spent waiting for a response to this message
 # TYPE avalanche_C_lat_accepted_frontier_sum gauge
-avalanche_C_lat_accepted_frontier_sum 542405
+avalanche_C_lat_accepted_frontier_sum 426403
 # HELP avalanche_C_lat_accepted_state_summary_count Total # of observations of time (in ns) spent waiting for a response to this message
 # TYPE avalanche_C_lat_accepted_state_summary_count counter
 avalanche_C_lat_accepted_state_summary_count 0
@@ -651,7 +651,7 @@ avalanche_C_lat_accepted_state_summary_count 0
 avalanche_C_lat_accepted_state_summary_sum 0
 # HELP avalanche_C_lat_accepted_sum Sum of time (in ns) spent waiting for a response to this message
 # TYPE avalanche_C_lat_accepted_sum gauge
-avalanche_C_lat_accepted_sum 65200
+avalanche_C_lat_accepted_sum 47600
 # HELP avalanche_C_lat_ancestors_count Total # of observations of time (in ns) spent waiting for a response to this message
 # TYPE avalanche_C_lat_ancestors_count counter
 avalanche_C_lat_ancestors_count 0
@@ -690,7 +690,7 @@ avalanche_C_non_verified_blks 0
 avalanche_C_non_verified_cache_get_count 1
 # HELP avalanche_C_non_verified_cache_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_C_non_verified_cache_get_sum gauge
-avalanche_C_non_verified_cache_get_sum 2300
+avalanche_C_non_verified_cache_get_sum 1200
 # HELP avalanche_C_non_verified_cache_hit # of times a hit occurred
 # TYPE avalanche_C_non_verified_cache_hit counter
 avalanche_C_non_verified_cache_hit 0
@@ -756,7 +756,7 @@ avalanche_C_vm_chain_state_bytes_to_id_cache_put_sum 0
 avalanche_C_vm_chain_state_decided_cache_get_count 6
 # HELP avalanche_C_vm_chain_state_decided_cache_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_C_vm_chain_state_decided_cache_get_sum gauge
-avalanche_C_vm_chain_state_decided_cache_get_sum 2200
+avalanche_C_vm_chain_state_decided_cache_get_sum 1801
 # HELP avalanche_C_vm_chain_state_decided_cache_hit # of times a hit occurred
 # TYPE avalanche_C_vm_chain_state_decided_cache_hit counter
 avalanche_C_vm_chain_state_decided_cache_hit 6
@@ -768,7 +768,7 @@ avalanche_C_vm_chain_state_decided_cache_miss 0
 avalanche_C_vm_chain_state_decided_cache_put_count 1
 # HELP avalanche_C_vm_chain_state_decided_cache_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_C_vm_chain_state_decided_cache_put_sum gauge
-avalanche_C_vm_chain_state_decided_cache_put_sum 2000
+avalanche_C_vm_chain_state_decided_cache_put_sum 1700
 # HELP avalanche_C_vm_chain_state_missing_cache_get_count Total # of observations of time (in ns) of a get
 # TYPE avalanche_C_vm_chain_state_missing_cache_get_count counter
 avalanche_C_vm_chain_state_missing_cache_get_count 0
@@ -1281,9 +1281,9 @@ avalanche_C_vm_eth_trie_memcache_clean_write 120
 # TYPE avalanche_C_vm_eth_trie_memcache_commit_count gauge
 avalanche_C_vm_eth_trie_memcache_commit_count 2
 # TYPE avalanche_C_vm_eth_trie_memcache_commit_locktime summary
-avalanche_C_vm_eth_trie_memcache_commit_locktime{quantile="0.5"} 1600
-avalanche_C_vm_eth_trie_memcache_commit_locktime{quantile="0.75"} 2500
-avalanche_C_vm_eth_trie_memcache_commit_locktime{quantile="0.95"} 2500
+avalanche_C_vm_eth_trie_memcache_commit_locktime{quantile="0.5"} 1500
+avalanche_C_vm_eth_trie_memcache_commit_locktime{quantile="0.75"} 2000
+avalanche_C_vm_eth_trie_memcache_commit_locktime{quantile="0.95"} 2000
 avalanche_C_vm_eth_trie_memcache_commit_locktime{quantile="0"} 0
 avalanche_C_vm_eth_trie_memcache_commit_locktime{quantile="0"} 0
 avalanche_C_vm_eth_trie_memcache_commit_locktime{quantile="0"} 0
@@ -1294,9 +1294,9 @@ avalanche_C_vm_eth_trie_memcache_commit_nodes 2
 # TYPE avalanche_C_vm_eth_trie_memcache_commit_size gauge
 avalanche_C_vm_eth_trie_memcache_commit_size 302
 # TYPE avalanche_C_vm_eth_trie_memcache_commit_time summary
-avalanche_C_vm_eth_trie_memcache_commit_time{quantile="0.5"} 5400
-avalanche_C_vm_eth_trie_memcache_commit_time{quantile="0.75"} 32900
-avalanche_C_vm_eth_trie_memcache_commit_time{quantile="0.95"} 32900
+avalanche_C_vm_eth_trie_memcache_commit_time{quantile="0.5"} 5100
+avalanche_C_vm_eth_trie_memcache_commit_time{quantile="0.75"} 24500
+avalanche_C_vm_eth_trie_memcache_commit_time{quantile="0.95"} 24500
 avalanche_C_vm_eth_trie_memcache_commit_time{quantile="0"} 0
 avalanche_C_vm_eth_trie_memcache_commit_time{quantile="0"} 0
 avalanche_C_vm_eth_trie_memcache_commit_time{quantile="0"} 0
@@ -1438,7 +1438,7 @@ avalanche_C_vm_metervm_get_block_id_at_height_count 0
 avalanche_C_vm_metervm_get_block_id_at_height_sum 0
 # HELP avalanche_C_vm_metervm_get_block_sum Sum of time (in ns) of a get_block
 # TYPE avalanche_C_vm_metervm_get_block_sum gauge
-avalanche_C_vm_metervm_get_block_sum 14900
+avalanche_C_vm_metervm_get_block_sum 12401
 # HELP avalanche_C_vm_metervm_get_last_state_summary_count Total # of observations of time (in ns) of a get_last_state_summary
 # TYPE avalanche_C_vm_metervm_get_last_state_summary_count counter
 avalanche_C_vm_metervm_get_last_state_summary_count 0
@@ -1468,7 +1468,7 @@ avalanche_C_vm_metervm_get_state_summary_sum 0
 avalanche_C_vm_metervm_last_accepted_count 3
 # HELP avalanche_C_vm_metervm_last_accepted_sum Sum of time (in ns) of a last_accepted
 # TYPE avalanche_C_vm_metervm_last_accepted_sum gauge
-avalanche_C_vm_metervm_last_accepted_sum 17701
+avalanche_C_vm_metervm_last_accepted_sum 15100
 # HELP avalanche_C_vm_metervm_parse_block_count Total # of observations of time (in ns) of a parse_block
 # TYPE avalanche_C_vm_metervm_parse_block_count counter
 avalanche_C_vm_metervm_parse_block_count 0
@@ -1504,7 +1504,7 @@ avalanche_C_vm_metervm_reject_sum 0
 avalanche_C_vm_metervm_set_preference_count 1
 # HELP avalanche_C_vm_metervm_set_preference_sum Sum of time (in ns) of a set_preference
 # TYPE avalanche_C_vm_metervm_set_preference_sum gauge
-avalanche_C_vm_metervm_set_preference_sum 4200
+avalanche_C_vm_metervm_set_preference_sum 2000
 # HELP avalanche_C_vm_metervm_should_verify_with_context_count Total # of observations of time (in ns) of a should_verify_with_context
 # TYPE avalanche_C_vm_metervm_should_verify_with_context_count counter
 avalanche_C_vm_metervm_should_verify_with_context_count 0
@@ -1684,7 +1684,7 @@ avalanche_P_db_batch_put_size_count 40
 avalanche_P_db_batch_put_size_sum 8423
 # HELP avalanche_P_db_batch_put_sum Sum of time (in ns) of a batch_put
 # TYPE avalanche_P_db_batch_put_sum gauge
-avalanche_P_db_batch_put_sum 21700
+avalanche_P_db_batch_put_sum 19900
 # HELP avalanche_P_db_batch_replay_count Total # of observations of time (in ns) of a batch_replay
 # TYPE avalanche_P_db_batch_replay_count counter
 avalanche_P_db_batch_replay_count 0
@@ -1696,7 +1696,7 @@ avalanche_P_db_batch_replay_sum 0
 avalanche_P_db_batch_reset_count 4
 # HELP avalanche_P_db_batch_reset_sum Sum of time (in ns) of a batch_reset
 # TYPE avalanche_P_db_batch_reset_sum gauge
-avalanche_P_db_batch_reset_sum 1900
+avalanche_P_db_batch_reset_sum 2000
 # HELP avalanche_P_db_batch_size_count Total # of observations of time (in ns) of a batch_size
 # TYPE avalanche_P_db_batch_size_count counter
 avalanche_P_db_batch_size_count 0
@@ -1714,7 +1714,7 @@ avalanche_P_db_batch_write_size_count 3
 avalanche_P_db_batch_write_size_sum 8743
 # HELP avalanche_P_db_batch_write_sum Sum of time (in ns) of a batch_write
 # TYPE avalanche_P_db_batch_write_sum gauge
-avalanche_P_db_batch_write_sum 68201
+avalanche_P_db_batch_write_sum 77601
 # HELP avalanche_P_db_close_count Total # of observations of time (in ns) of a close
 # TYPE avalanche_P_db_close_count counter
 avalanche_P_db_close_count 0
@@ -1750,7 +1750,7 @@ avalanche_P_db_get_size_count 39
 avalanche_P_db_get_size_sum 3240
 # HELP avalanche_P_db_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_P_db_get_sum gauge
-avalanche_P_db_get_sum 75300
+avalanche_P_db_get_sum 72800
 # HELP avalanche_P_db_has_count Total # of observations of time (in ns) of a has
 # TYPE avalanche_P_db_has_count counter
 avalanche_P_db_has_count 1
@@ -1792,7 +1792,7 @@ avalanche_P_db_iterator_next_size_count 1
 avalanche_P_db_iterator_next_size_sum 0
 # HELP avalanche_P_db_iterator_next_sum Sum of time (in ns) of a iterator_next
 # TYPE avalanche_P_db_iterator_next_sum gauge
-avalanche_P_db_iterator_next_sum 2500
+avalanche_P_db_iterator_next_sum 2800
 # HELP avalanche_P_db_iterator_release_count Total # of observations of time (in ns) of a iterator_release
 # TYPE avalanche_P_db_iterator_release_count counter
 avalanche_P_db_iterator_release_count 1
@@ -1810,13 +1810,13 @@ avalanche_P_db_iterator_value_sum 0
 avalanche_P_db_new_batch_count 3
 # HELP avalanche_P_db_new_batch_sum Sum of time (in ns) of a new_batch
 # TYPE avalanche_P_db_new_batch_sum gauge
-avalanche_P_db_new_batch_sum 4000
+avalanche_P_db_new_batch_sum 3600
 # HELP avalanche_P_db_new_iterator_count Total # of observations of time (in ns) of a new_iterator
 # TYPE avalanche_P_db_new_iterator_count counter
 avalanche_P_db_new_iterator_count 1
 # HELP avalanche_P_db_new_iterator_sum Sum of time (in ns) of a new_iterator
 # TYPE avalanche_P_db_new_iterator_sum gauge
-avalanche_P_db_new_iterator_sum 6500
+avalanche_P_db_new_iterator_sum 6400
 # HELP avalanche_P_db_put_count Total # of observations of time (in ns) of a put
 # TYPE avalanche_P_db_put_count counter
 avalanche_P_db_put_count 0
@@ -1963,7 +1963,7 @@ avalanche_P_handler_connected_subnet_count 0
 avalanche_P_handler_connected_subnet_sum 0
 # HELP avalanche_P_handler_connected_sum Sum of time (in ns) of processing a connected
 # TYPE avalanche_P_handler_connected_sum gauge
-avalanche_P_handler_connected_sum 35100
+avalanche_P_handler_connected_sum 71600
 # HELP avalanche_P_handler_cross_chain_app_request_count Total # of observations of time (in ns) of processing a cross_chain_app_request
 # TYPE avalanche_P_handler_cross_chain_app_request_count counter
 avalanche_P_handler_cross_chain_app_request_count 0
@@ -2110,7 +2110,7 @@ avalanche_P_handler_state_summary_frontier_sum 0
 avalanche_P_handler_timeout_count 1
 # HELP avalanche_P_handler_timeout_sum Sum of time (in ns) of processing a timeout
 # TYPE avalanche_P_handler_timeout_sum gauge
-avalanche_P_handler_timeout_sum 241403
+avalanche_P_handler_timeout_sum 203101
 # HELP avalanche_P_handler_unprocessed_msgs_accepted_count Number of of accepted messages in the message queue.
 # TYPE avalanche_P_handler_unprocessed_msgs_accepted_count gauge
 avalanche_P_handler_unprocessed_msgs_accepted_count 0
@@ -2329,7 +2329,7 @@ avalanche_P_vm_atomic_blks_accepted 0
 avalanche_P_vm_block_cache_get_count 3
 # HELP avalanche_P_vm_block_cache_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_P_vm_block_cache_get_sum gauge
-avalanche_P_vm_block_cache_get_sum 1200
+avalanche_P_vm_block_cache_get_sum 1201
 # HELP avalanche_P_vm_block_cache_hit # of times a hit occurred
 # TYPE avalanche_P_vm_block_cache_hit counter
 avalanche_P_vm_block_cache_hit 3
@@ -2341,13 +2341,13 @@ avalanche_P_vm_block_cache_miss 0
 avalanche_P_vm_block_cache_put_count 1
 # HELP avalanche_P_vm_block_cache_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_P_vm_block_cache_put_sum gauge
-avalanche_P_vm_block_cache_put_sum 1700
+avalanche_P_vm_block_cache_put_sum 1400
 # HELP avalanche_P_vm_chain_cache_get_count Total # of observations of time (in ns) of a get
 # TYPE avalanche_P_vm_chain_cache_get_count counter
 avalanche_P_vm_chain_cache_get_count 3
 # HELP avalanche_P_vm_chain_cache_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_P_vm_chain_cache_get_sum gauge
-avalanche_P_vm_chain_cache_get_sum 3300
+avalanche_P_vm_chain_cache_get_sum 2300
 # HELP avalanche_P_vm_chain_cache_hit # of times a hit occurred
 # TYPE avalanche_P_vm_chain_cache_hit counter
 avalanche_P_vm_chain_cache_hit 0
@@ -2365,7 +2365,7 @@ avalanche_P_vm_chain_cache_put_sum 600
 avalanche_P_vm_chain_db_cache_get_count 3
 # HELP avalanche_P_vm_chain_db_cache_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_P_vm_chain_db_cache_get_sum gauge
-avalanche_P_vm_chain_db_cache_get_sum 1100
+avalanche_P_vm_chain_db_cache_get_sum 1200
 # HELP avalanche_P_vm_chain_db_cache_hit # of times a hit occurred
 # TYPE avalanche_P_vm_chain_db_cache_hit counter
 avalanche_P_vm_chain_db_cache_hit 2
@@ -2377,7 +2377,7 @@ avalanche_P_vm_chain_db_cache_miss 1
 avalanche_P_vm_chain_db_cache_put_count 1
 # HELP avalanche_P_vm_chain_db_cache_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_P_vm_chain_db_cache_put_sum gauge
-avalanche_P_vm_chain_db_cache_put_sum 400
+avalanche_P_vm_chain_db_cache_put_sum 300
 # HELP avalanche_P_vm_commit_blks_accepted Number of commit blocks accepted
 # TYPE avalanche_P_vm_commit_blks_accepted counter
 avalanche_P_vm_commit_blks_accepted 0
@@ -2398,7 +2398,7 @@ avalanche_P_vm_import_txs_accepted 0
 avalanche_P_vm_index_cache_get_count 3
 # HELP avalanche_P_vm_index_cache_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_P_vm_index_cache_get_sum gauge
-avalanche_P_vm_index_cache_get_sum 1000
+avalanche_P_vm_index_cache_get_sum 1400
 # HELP avalanche_P_vm_index_cache_hit # of times a hit occurred
 # TYPE avalanche_P_vm_index_cache_hit counter
 avalanche_P_vm_index_cache_hit 1
@@ -2470,7 +2470,7 @@ avalanche_P_vm_metervm_get_block_id_at_height_count 0
 avalanche_P_vm_metervm_get_block_id_at_height_sum 0
 # HELP avalanche_P_vm_metervm_get_block_sum Sum of time (in ns) of a get_block
 # TYPE avalanche_P_vm_metervm_get_block_sum gauge
-avalanche_P_vm_metervm_get_block_sum 11700
+avalanche_P_vm_metervm_get_block_sum 10301
 # HELP avalanche_P_vm_metervm_get_last_state_summary_count Total # of observations of time (in ns) of a get_last_state_summary
 # TYPE avalanche_P_vm_metervm_get_last_state_summary_count counter
 avalanche_P_vm_metervm_get_last_state_summary_count 0
@@ -2500,7 +2500,7 @@ avalanche_P_vm_metervm_get_state_summary_sum 0
 avalanche_P_vm_metervm_last_accepted_count 2
 # HELP avalanche_P_vm_metervm_last_accepted_sum Sum of time (in ns) of a last_accepted
 # TYPE avalanche_P_vm_metervm_last_accepted_sum gauge
-avalanche_P_vm_metervm_last_accepted_sum 15700
+avalanche_P_vm_metervm_last_accepted_sum 11700
 # HELP avalanche_P_vm_metervm_parse_block_count Total # of observations of time (in ns) of a parse_block
 # TYPE avalanche_P_vm_metervm_parse_block_count counter
 avalanche_P_vm_metervm_parse_block_count 0
@@ -2536,7 +2536,7 @@ avalanche_P_vm_metervm_reject_sum 0
 avalanche_P_vm_metervm_set_preference_count 1
 # HELP avalanche_P_vm_metervm_set_preference_sum Sum of time (in ns) of a set_preference
 # TYPE avalanche_P_vm_metervm_set_preference_sum gauge
-avalanche_P_vm_metervm_set_preference_sum 1200
+avalanche_P_vm_metervm_set_preference_sum 600
 # HELP avalanche_P_vm_metervm_should_verify_with_context_count Total # of observations of time (in ns) of a should_verify_with_context
 # TYPE avalanche_P_vm_metervm_should_verify_with_context_count counter
 avalanche_P_vm_metervm_should_verify_with_context_count 0
@@ -2548,7 +2548,7 @@ avalanche_P_vm_metervm_should_verify_with_context_sum 0
 avalanche_P_vm_metervm_state_sync_enabled_count 1
 # HELP avalanche_P_vm_metervm_state_sync_enabled_sum Sum of time (in ns) of a state_sync_enabled
 # TYPE avalanche_P_vm_metervm_state_sync_enabled_sum gauge
-avalanche_P_vm_metervm_state_sync_enabled_sum 500
+avalanche_P_vm_metervm_state_sync_enabled_sum 400
 # HELP avalanche_P_vm_metervm_verify_count Total # of observations of time (in ns) of a verify
 # TYPE avalanche_P_vm_metervm_verify_count counter
 avalanche_P_vm_metervm_verify_count 0
@@ -2680,7 +2680,7 @@ avalanche_P_vm_transformed_subnet_cache_put_sum 0
 avalanche_P_vm_tx_cache_get_count 7
 # HELP avalanche_P_vm_tx_cache_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_P_vm_tx_cache_get_sum gauge
-avalanche_P_vm_tx_cache_get_sum 1200
+avalanche_P_vm_tx_cache_get_sum 1500
 # HELP avalanche_P_vm_tx_cache_hit # of times a hit occurred
 # TYPE avalanche_P_vm_tx_cache_hit counter
 avalanche_P_vm_tx_cache_hit 7
@@ -2710,7 +2710,7 @@ avalanche_P_vm_utxo_cache_miss 0
 avalanche_P_vm_utxo_cache_put_count 3
 # HELP avalanche_P_vm_utxo_cache_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_P_vm_utxo_cache_put_sum gauge
-avalanche_P_vm_utxo_cache_put_sum 1900
+avalanche_P_vm_utxo_cache_put_sum 3100
 # HELP avalanche_P_vm_validator_pub_key_diffs_cache_get_count Total # of observations of time (in ns) of a get
 # TYPE avalanche_P_vm_validator_pub_key_diffs_cache_get_count counter
 avalanche_P_vm_validator_pub_key_diffs_cache_get_count 0
@@ -2728,7 +2728,7 @@ avalanche_P_vm_validator_pub_key_diffs_cache_miss 0
 avalanche_P_vm_validator_pub_key_diffs_cache_put_count 3
 # HELP avalanche_P_vm_validator_pub_key_diffs_cache_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_P_vm_validator_pub_key_diffs_cache_put_sum gauge
-avalanche_P_vm_validator_pub_key_diffs_cache_put_sum 2200
+avalanche_P_vm_validator_pub_key_diffs_cache_put_sum 1800
 # HELP avalanche_P_vm_validator_sets_cached Total number of validator sets cached
 # TYPE avalanche_P_vm_validator_sets_cached counter
 avalanche_P_vm_validator_sets_cached 0
@@ -2758,7 +2758,7 @@ avalanche_P_vm_validator_weight_diffs_cache_miss 0
 avalanche_P_vm_validator_weight_diffs_cache_put_count 1
 # HELP avalanche_P_vm_validator_weight_diffs_cache_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_P_vm_validator_weight_diffs_cache_put_sum gauge
-avalanche_P_vm_validator_weight_diffs_cache_put_sum 1100
+avalanche_P_vm_validator_weight_diffs_cache_put_sum 900
 # HELP avalanche_P_vm_votes_lost Total number of votes this node has lost
 # TYPE avalanche_P_vm_votes_lost counter
 avalanche_P_vm_votes_lost 0
@@ -2830,7 +2830,7 @@ avalanche_X_db_batch_put_size_count 10
 avalanche_X_db_batch_put_size_sum 1502
 # HELP avalanche_X_db_batch_put_sum Sum of time (in ns) of a batch_put
 # TYPE avalanche_X_db_batch_put_sum gauge
-avalanche_X_db_batch_put_sum 7800
+avalanche_X_db_batch_put_sum 5500
 # HELP avalanche_X_db_batch_replay_count Total # of observations of time (in ns) of a batch_replay
 # TYPE avalanche_X_db_batch_replay_count counter
 avalanche_X_db_batch_replay_count 0
@@ -2842,7 +2842,7 @@ avalanche_X_db_batch_replay_sum 0
 avalanche_X_db_batch_reset_count 8
 # HELP avalanche_X_db_batch_reset_sum Sum of time (in ns) of a batch_reset
 # TYPE avalanche_X_db_batch_reset_sum gauge
-avalanche_X_db_batch_reset_sum 65400
+avalanche_X_db_batch_reset_sum 2400
 # HELP avalanche_X_db_batch_size_count Total # of observations of time (in ns) of a batch_size
 # TYPE avalanche_X_db_batch_size_count counter
 avalanche_X_db_batch_size_count 0
@@ -2860,7 +2860,7 @@ avalanche_X_db_batch_write_size_count 4
 avalanche_X_db_batch_write_size_sum 1582
 # HELP avalanche_X_db_batch_write_sum Sum of time (in ns) of a batch_write
 # TYPE avalanche_X_db_batch_write_sum gauge
-avalanche_X_db_batch_write_sum 37900
+avalanche_X_db_batch_write_sum 31900
 # HELP avalanche_X_db_close_count Total # of observations of time (in ns) of a close
 # TYPE avalanche_X_db_close_count counter
 avalanche_X_db_close_count 0
@@ -2896,7 +2896,7 @@ avalanche_X_db_get_size_count 11
 avalanche_X_db_get_size_sum 893
 # HELP avalanche_X_db_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_X_db_get_sum gauge
-avalanche_X_db_get_sum 25100
+avalanche_X_db_get_sum 23400
 # HELP avalanche_X_db_has_count Total # of observations of time (in ns) of a has
 # TYPE avalanche_X_db_has_count counter
 avalanche_X_db_has_count 1
@@ -2908,7 +2908,7 @@ avalanche_X_db_has_size_count 1
 avalanche_X_db_has_size_sum 65
 # HELP avalanche_X_db_has_sum Sum of time (in ns) of a has
 # TYPE avalanche_X_db_has_sum gauge
-avalanche_X_db_has_sum 2600
+avalanche_X_db_has_sum 2200
 # HELP avalanche_X_db_health_check_count Total # of observations of time (in ns) of a health_check
 # TYPE avalanche_X_db_health_check_count counter
 avalanche_X_db_health_check_count 0
@@ -2920,7 +2920,7 @@ avalanche_X_db_health_check_sum 0
 avalanche_X_db_iterator_error_count 2
 # HELP avalanche_X_db_iterator_error_sum Sum of time (in ns) of a iterator_error
 # TYPE avalanche_X_db_iterator_error_sum gauge
-avalanche_X_db_iterator_error_sum 700
+avalanche_X_db_iterator_error_sum 600
 # HELP avalanche_X_db_iterator_key_count Total # of observations of time (in ns) of a iterator_key
 # TYPE avalanche_X_db_iterator_key_count counter
 avalanche_X_db_iterator_key_count 0
@@ -2938,13 +2938,13 @@ avalanche_X_db_iterator_next_size_count 2
 avalanche_X_db_iterator_next_size_sum 0
 # HELP avalanche_X_db_iterator_next_sum Sum of time (in ns) of a iterator_next
 # TYPE avalanche_X_db_iterator_next_sum gauge
-avalanche_X_db_iterator_next_sum 2400
+avalanche_X_db_iterator_next_sum 2200
 # HELP avalanche_X_db_iterator_release_count Total # of observations of time (in ns) of a iterator_release
 # TYPE avalanche_X_db_iterator_release_count counter
 avalanche_X_db_iterator_release_count 2
 # HELP avalanche_X_db_iterator_release_sum Sum of time (in ns) of a iterator_release
 # TYPE avalanche_X_db_iterator_release_sum gauge
-avalanche_X_db_iterator_release_sum 1600
+avalanche_X_db_iterator_release_sum 1800
 # HELP avalanche_X_db_iterator_value_count Total # of observations of time (in ns) of a iterator_value
 # TYPE avalanche_X_db_iterator_value_count counter
 avalanche_X_db_iterator_value_count 0
@@ -2956,13 +2956,13 @@ avalanche_X_db_iterator_value_sum 0
 avalanche_X_db_new_batch_count 4
 # HELP avalanche_X_db_new_batch_sum Sum of time (in ns) of a new_batch
 # TYPE avalanche_X_db_new_batch_sum gauge
-avalanche_X_db_new_batch_sum 3100
+avalanche_X_db_new_batch_sum 2900
 # HELP avalanche_X_db_new_iterator_count Total # of observations of time (in ns) of a new_iterator
 # TYPE avalanche_X_db_new_iterator_count counter
 avalanche_X_db_new_iterator_count 2
 # HELP avalanche_X_db_new_iterator_sum Sum of time (in ns) of a new_iterator
 # TYPE avalanche_X_db_new_iterator_sum gauge
-avalanche_X_db_new_iterator_sum 7400
+avalanche_X_db_new_iterator_sum 19600
 # HELP avalanche_X_db_put_count Total # of observations of time (in ns) of a put
 # TYPE avalanche_X_db_put_count counter
 avalanche_X_db_put_count 0
@@ -3013,7 +3013,7 @@ avalanche_X_handler_accepted_count 1
 avalanche_X_handler_accepted_frontier_count 1
 # HELP avalanche_X_handler_accepted_frontier_sum Sum of time (in ns) of processing a accepted_frontier
 # TYPE avalanche_X_handler_accepted_frontier_sum gauge
-avalanche_X_handler_accepted_frontier_sum 10700
+avalanche_X_handler_accepted_frontier_sum 11600
 # HELP avalanche_X_handler_accepted_state_summary_count Total # of observations of time (in ns) of processing a accepted_state_summary
 # TYPE avalanche_X_handler_accepted_state_summary_count counter
 avalanche_X_handler_accepted_state_summary_count 0
@@ -3022,7 +3022,7 @@ avalanche_X_handler_accepted_state_summary_count 0
 avalanche_X_handler_accepted_state_summary_sum 0
 # HELP avalanche_X_handler_accepted_sum Sum of time (in ns) of processing a accepted
 # TYPE avalanche_X_handler_accepted_sum gauge
-avalanche_X_handler_accepted_sum 571505
+avalanche_X_handler_accepted_sum 239301
 # HELP avalanche_X_handler_ancestors_count Total # of observations of time (in ns) of processing a ancestors
 # TYPE avalanche_X_handler_ancestors_count counter
 avalanche_X_handler_ancestors_count 0
@@ -3103,7 +3103,7 @@ avalanche_X_handler_connected_subnet_count 0
 avalanche_X_handler_connected_subnet_sum 0
 # HELP avalanche_X_handler_connected_sum Sum of time (in ns) of processing a connected
 # TYPE avalanche_X_handler_connected_sum gauge
-avalanche_X_handler_connected_sum 61801
+avalanche_X_handler_connected_sum 32401
 # HELP avalanche_X_handler_cross_chain_app_request_count Total # of observations of time (in ns) of processing a cross_chain_app_request
 # TYPE avalanche_X_handler_cross_chain_app_request_count counter
 avalanche_X_handler_cross_chain_app_request_count 0
@@ -3151,7 +3151,7 @@ avalanche_X_handler_get_accepted_frontier_failed_count 0
 avalanche_X_handler_get_accepted_frontier_failed_sum 0
 # HELP avalanche_X_handler_get_accepted_frontier_sum Sum of time (in ns) of processing a get_accepted_frontier
 # TYPE avalanche_X_handler_get_accepted_frontier_sum gauge
-avalanche_X_handler_get_accepted_frontier_sum 3500
+avalanche_X_handler_get_accepted_frontier_sum 3400
 # HELP avalanche_X_handler_get_accepted_state_summary_count Total # of observations of time (in ns) of processing a get_accepted_state_summary
 # TYPE avalanche_X_handler_get_accepted_state_summary_count counter
 avalanche_X_handler_get_accepted_state_summary_count 0
@@ -3166,7 +3166,7 @@ avalanche_X_handler_get_accepted_state_summary_failed_sum 0
 avalanche_X_handler_get_accepted_state_summary_sum 0
 # HELP avalanche_X_handler_get_accepted_sum Sum of time (in ns) of processing a get_accepted
 # TYPE avalanche_X_handler_get_accepted_sum gauge
-avalanche_X_handler_get_accepted_sum 2600
+avalanche_X_handler_get_accepted_sum 2400
 # HELP avalanche_X_handler_get_ancestors_count Total # of observations of time (in ns) of processing a get_ancestors
 # TYPE avalanche_X_handler_get_ancestors_count counter
 avalanche_X_handler_get_ancestors_count 0
@@ -3343,7 +3343,7 @@ avalanche_X_lat_accepted_count 1
 avalanche_X_lat_accepted_frontier_count 1
 # HELP avalanche_X_lat_accepted_frontier_sum Sum of time (in ns) spent waiting for a response to this message
 # TYPE avalanche_X_lat_accepted_frontier_sum gauge
-avalanche_X_lat_accepted_frontier_sum 24500
+avalanche_X_lat_accepted_frontier_sum 22501
 # HELP avalanche_X_lat_accepted_state_summary_count Total # of observations of time (in ns) spent waiting for a response to this message
 # TYPE avalanche_X_lat_accepted_state_summary_count counter
 avalanche_X_lat_accepted_state_summary_count 0
@@ -3352,7 +3352,7 @@ avalanche_X_lat_accepted_state_summary_count 0
 avalanche_X_lat_accepted_state_summary_sum 0
 # HELP avalanche_X_lat_accepted_sum Sum of time (in ns) spent waiting for a response to this message
 # TYPE avalanche_X_lat_accepted_sum gauge
-avalanche_X_lat_accepted_sum 14300
+avalanche_X_lat_accepted_sum 13500
 # HELP avalanche_X_lat_ancestors_count Total # of observations of time (in ns) spent waiting for a response to this message
 # TYPE avalanche_X_lat_ancestors_count counter
 avalanche_X_lat_ancestors_count 0
@@ -3484,7 +3484,7 @@ avalanche_X_virtuous_tx_processing 0
 avalanche_X_vm_index_cache_get_count 2
 # HELP avalanche_X_vm_index_cache_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_X_vm_index_cache_get_sum gauge
-avalanche_X_vm_index_cache_get_sum 1200
+avalanche_X_vm_index_cache_get_sum 1300
 # HELP avalanche_X_vm_index_cache_hit # of times a hit occurred
 # TYPE avalanche_X_vm_index_cache_hit counter
 avalanche_X_vm_index_cache_hit 0
@@ -3496,7 +3496,7 @@ avalanche_X_vm_index_cache_miss 2
 avalanche_X_vm_index_cache_put_count 2
 # HELP avalanche_X_vm_index_cache_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_X_vm_index_cache_put_sum gauge
-avalanche_X_vm_index_cache_put_sum 600
+avalanche_X_vm_index_cache_put_sum 800
 # HELP avalanche_X_vm_metervm_accept_count Total # of observations of time (in ns) of a accept
 # TYPE avalanche_X_vm_metervm_accept_count counter
 avalanche_X_vm_metervm_accept_count 0
@@ -3568,7 +3568,7 @@ avalanche_X_vm_status_cache_miss 0
 avalanche_X_vm_status_cache_put_count 1
 # HELP avalanche_X_vm_status_cache_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_X_vm_status_cache_put_sum gauge
-avalanche_X_vm_status_cache_put_sum 1000
+avalanche_X_vm_status_cache_put_sum 900
 # HELP avalanche_X_vm_tx_cache_get_count Total # of observations of time (in ns) of a get
 # TYPE avalanche_X_vm_tx_cache_get_count counter
 avalanche_X_vm_tx_cache_get_count 0
@@ -3586,7 +3586,7 @@ avalanche_X_vm_tx_cache_miss 0
 avalanche_X_vm_tx_cache_put_count 1
 # HELP avalanche_X_vm_tx_cache_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_X_vm_tx_cache_put_sum gauge
-avalanche_X_vm_tx_cache_put_sum 2100
+avalanche_X_vm_tx_cache_put_sum 2400
 # HELP avalanche_X_vm_tx_refresh_hits Number of times unique txs have not been unique, but were cached
 # TYPE avalanche_X_vm_tx_refresh_hits counter
 avalanche_X_vm_tx_refresh_hits 0
@@ -3613,7 +3613,7 @@ avalanche_X_vm_utxo_cache_miss 0
 avalanche_X_vm_utxo_cache_put_count 2
 # HELP avalanche_X_vm_utxo_cache_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_X_vm_utxo_cache_put_sum gauge
-avalanche_X_vm_utxo_cache_put_sum 1700
+avalanche_X_vm_utxo_cache_put_sum 1600
 # HELP avalanche_X_vtx_accepted_container_size_sum Cumulative sum of container size of all accepted vtx
 # TYPE avalanche_X_vtx_accepted_container_size_sum gauge
 avalanche_X_vtx_accepted_container_size_sum 0
@@ -3772,7 +3772,7 @@ avalanche_db_batch_put_size_count 58
 avalanche_db_batch_put_size_sum 10839
 # HELP avalanche_db_batch_put_sum Sum of time (in ns) of a batch_put
 # TYPE avalanche_db_batch_put_sum gauge
-avalanche_db_batch_put_sum 56200
+avalanche_db_batch_put_sum 21500
 # HELP avalanche_db_batch_replay_count Total # of observations of time (in ns) of a batch_replay
 # TYPE avalanche_db_batch_replay_count counter
 avalanche_db_batch_replay_count 0
@@ -3784,13 +3784,13 @@ avalanche_db_batch_replay_sum 0
 avalanche_db_batch_reset_count 22
 # HELP avalanche_db_batch_reset_sum Sum of time (in ns) of a batch_reset
 # TYPE avalanche_db_batch_reset_sum gauge
-avalanche_db_batch_reset_sum 65300
+avalanche_db_batch_reset_sum 3300
 # HELP avalanche_db_batch_size_count Total # of observations of time (in ns) of a batch_size
 # TYPE avalanche_db_batch_size_count counter
 avalanche_db_batch_size_count 20
 # HELP avalanche_db_batch_size_sum Sum of time (in ns) of a batch_size
 # TYPE avalanche_db_batch_size_sum gauge
-avalanche_db_batch_size_sum 1900
+avalanche_db_batch_size_sum 1500
 # HELP avalanche_db_batch_write_count Total # of observations of time (in ns) of a batch_write
 # TYPE avalanche_db_batch_write_count counter
 avalanche_db_batch_write_count 17
@@ -3802,7 +3802,7 @@ avalanche_db_batch_write_size_count 17
 avalanche_db_batch_write_size_sum 11391
 # HELP avalanche_db_batch_write_sum Sum of time (in ns) of a batch_write
 # TYPE avalanche_db_batch_write_sum gauge
-avalanche_db_batch_write_sum 196601
+avalanche_db_batch_write_sum 167901
 # HELP avalanche_db_close_count Total # of observations of time (in ns) of a close
 # TYPE avalanche_db_close_count counter
 avalanche_db_close_count 0
@@ -3826,7 +3826,7 @@ avalanche_db_delete_size_count 4
 avalanche_db_delete_size_sum 319
 # HELP avalanche_db_delete_sum Sum of time (in ns) of a delete
 # TYPE avalanche_db_delete_sum gauge
-avalanche_db_delete_sum 33001
+avalanche_db_delete_sum 21800
 # HELP avalanche_db_get_count Total # of observations of time (in ns) of a get
 # TYPE avalanche_db_get_count counter
 avalanche_db_get_count 82
@@ -3838,7 +3838,7 @@ avalanche_db_get_size_count 82
 avalanche_db_get_size_sum 8089
 # HELP avalanche_db_get_sum Sum of time (in ns) of a get
 # TYPE avalanche_db_get_sum gauge
-avalanche_db_get_sum 208201
+avalanche_db_get_sum 144900
 # HELP avalanche_db_has_count Total # of observations of time (in ns) of a has
 # TYPE avalanche_db_has_count counter
 avalanche_db_has_count 5
@@ -3850,7 +3850,7 @@ avalanche_db_has_size_count 5
 avalanche_db_has_size_sum 380
 # HELP avalanche_db_has_sum Sum of time (in ns) of a has
 # TYPE avalanche_db_has_sum gauge
-avalanche_db_has_sum 13300
+avalanche_db_has_sum 12700
 # HELP avalanche_db_health_check_count Total # of observations of time (in ns) of a health_check
 # TYPE avalanche_db_health_check_count counter
 avalanche_db_health_check_count 0
@@ -3901,13 +3901,13 @@ avalanche_db_internal_writes_delayed_duration 0
 avalanche_db_iterator_error_count 6
 # HELP avalanche_db_iterator_error_sum Sum of time (in ns) of a iterator_error
 # TYPE avalanche_db_iterator_error_sum gauge
-avalanche_db_iterator_error_sum 1200
+avalanche_db_iterator_error_sum 800
 # HELP avalanche_db_iterator_key_count Total # of observations of time (in ns) of a iterator_key
 # TYPE avalanche_db_iterator_key_count counter
 avalanche_db_iterator_key_count 8
 # HELP avalanche_db_iterator_key_sum Sum of time (in ns) of a iterator_key
 # TYPE avalanche_db_iterator_key_sum gauge
-avalanche_db_iterator_key_sum 900
+avalanche_db_iterator_key_sum 700
 # HELP avalanche_db_iterator_next_count Total # of observations of time (in ns) of a iterator_next
 # TYPE avalanche_db_iterator_next_count counter
 avalanche_db_iterator_next_count 8
@@ -3919,31 +3919,31 @@ avalanche_db_iterator_next_size_count 8
 avalanche_db_iterator_next_size_sum 0
 # HELP avalanche_db_iterator_next_sum Sum of time (in ns) of a iterator_next
 # TYPE avalanche_db_iterator_next_sum gauge
-avalanche_db_iterator_next_sum 22100
+avalanche_db_iterator_next_sum 10600
 # HELP avalanche_db_iterator_release_count Total # of observations of time (in ns) of a iterator_release
 # TYPE avalanche_db_iterator_release_count counter
 avalanche_db_iterator_release_count 8
 # HELP avalanche_db_iterator_release_sum Sum of time (in ns) of a iterator_release
 # TYPE avalanche_db_iterator_release_sum gauge
-avalanche_db_iterator_release_sum 9000
+avalanche_db_iterator_release_sum 6700
 # HELP avalanche_db_iterator_value_count Total # of observations of time (in ns) of a iterator_value
 # TYPE avalanche_db_iterator_value_count counter
 avalanche_db_iterator_value_count 8
 # HELP avalanche_db_iterator_value_sum Sum of time (in ns) of a iterator_value
 # TYPE avalanche_db_iterator_value_sum gauge
-avalanche_db_iterator_value_sum 700
+avalanche_db_iterator_value_sum 500
 # HELP avalanche_db_new_batch_count Total # of observations of time (in ns) of a new_batch
 # TYPE avalanche_db_new_batch_count counter
 avalanche_db_new_batch_count 16
 # HELP avalanche_db_new_batch_sum Sum of time (in ns) of a new_batch
 # TYPE avalanche_db_new_batch_sum gauge
-avalanche_db_new_batch_sum 16801
+avalanche_db_new_batch_sum 16500
 # HELP avalanche_db_new_iterator_count Total # of observations of time (in ns) of a new_iterator
 # TYPE avalanche_db_new_iterator_count counter
 avalanche_db_new_iterator_count 8
 # HELP avalanche_db_new_iterator_sum Sum of time (in ns) of a new_iterator
 # TYPE avalanche_db_new_iterator_sum gauge
-avalanche_db_new_iterator_sum 36300
+avalanche_db_new_iterator_sum 44300
 # HELP avalanche_db_put_count Total # of observations of time (in ns) of a put
 # TYPE avalanche_db_put_count counter
 avalanche_db_put_count 10
@@ -3955,7 +3955,7 @@ avalanche_db_put_size_count 10
 avalanche_db_put_size_sum 2156
 # HELP avalanche_db_put_sum Sum of time (in ns) of a put
 # TYPE avalanche_db_put_sum gauge
-avalanche_db_put_sum 129500
+avalanche_db_put_sum 97001
 # HELP avalanche_db_read_size_count Total # of observations of bytes passed in a read call
 # TYPE avalanche_db_read_size_count counter
 avalanche_db_read_size_count 95
@@ -3970,61 +3970,61 @@ avalanche_db_write_size_count 31
 avalanche_db_write_size_sum 13866
 # HELP avalanche_go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.
 # TYPE avalanche_go_gc_duration_seconds summary
-avalanche_go_gc_duration_seconds{quantile="0"} 3.27e-05
-avalanche_go_gc_duration_seconds{quantile="0.25"} 8.69e-05
-avalanche_go_gc_duration_seconds{quantile="0.5"} 0.000218801
-avalanche_go_gc_duration_seconds{quantile="0.75"} 0.0002441
-avalanche_go_gc_duration_seconds{quantile="1"} 0.001277107
-avalanche_go_gc_duration_seconds_sum 0.002619813
+avalanche_go_gc_duration_seconds{quantile="0"} 4.16e-05
+avalanche_go_gc_duration_seconds{quantile="0.25"} 0.0001304
+avalanche_go_gc_duration_seconds{quantile="0.5"} 0.000211601
+avalanche_go_gc_duration_seconds{quantile="0.75"} 0.000222301
+avalanche_go_gc_duration_seconds{quantile="1"} 0.000652004
+avalanche_go_gc_duration_seconds_sum 0.002023109
 avalanche_go_gc_duration_seconds_count 9
 # HELP avalanche_go_goroutines Number of goroutines that currently exist.
 # TYPE avalanche_go_goroutines gauge
-avalanche_go_goroutines 89
+avalanche_go_goroutines 90
 # HELP avalanche_go_info Information about the Go environment.
 # TYPE avalanche_go_info gauge
 avalanche_go_info{version="go1.19.5"} 1
 # HELP avalanche_go_memstats_alloc_bytes Number of bytes allocated and still in use.
 # TYPE avalanche_go_memstats_alloc_bytes gauge
-avalanche_go_memstats_alloc_bytes 3.3731216e+07
+avalanche_go_memstats_alloc_bytes 3.2802472e+07
 # HELP avalanche_go_memstats_alloc_bytes_total Total number of bytes allocated, even if freed.
 # TYPE avalanche_go_memstats_alloc_bytes_total counter
-avalanche_go_memstats_alloc_bytes_total 6.5318736e+07
+avalanche_go_memstats_alloc_bytes_total 6.4608176e+07
 # HELP avalanche_go_memstats_buck_hash_sys_bytes Number of bytes used by the profiling bucket hash table.
 # TYPE avalanche_go_memstats_buck_hash_sys_bytes gauge
-avalanche_go_memstats_buck_hash_sys_bytes 1.470297e+06
+avalanche_go_memstats_buck_hash_sys_bytes 1.466217e+06
 # HELP avalanche_go_memstats_frees_total Total number of frees.
 # TYPE avalanche_go_memstats_frees_total counter
-avalanche_go_memstats_frees_total 260696
+avalanche_go_memstats_frees_total 264274
 # HELP avalanche_go_memstats_gc_sys_bytes Number of bytes used for garbage collection system metadata.
 # TYPE avalanche_go_memstats_gc_sys_bytes gauge
-avalanche_go_memstats_gc_sys_bytes 9.79596e+06
+avalanche_go_memstats_gc_sys_bytes 9.781936e+06
 # HELP avalanche_go_memstats_heap_alloc_bytes Number of heap bytes allocated and still in use.
 # TYPE avalanche_go_memstats_heap_alloc_bytes gauge
-avalanche_go_memstats_heap_alloc_bytes 3.3731216e+07
+avalanche_go_memstats_heap_alloc_bytes 3.2802472e+07
 # HELP avalanche_go_memstats_heap_idle_bytes Number of heap bytes waiting to be used.
 # TYPE avalanche_go_memstats_heap_idle_bytes gauge
-avalanche_go_memstats_heap_idle_bytes 4.718592e+06
+avalanche_go_memstats_heap_idle_bytes 1.0215424e+07
 # HELP avalanche_go_memstats_heap_inuse_bytes Number of heap bytes that are in use.
 # TYPE avalanche_go_memstats_heap_inuse_bytes gauge
-avalanche_go_memstats_heap_inuse_bytes 3.6306944e+07
+avalanche_go_memstats_heap_inuse_bytes 3.5037184e+07
 # HELP avalanche_go_memstats_heap_objects Number of allocated objects.
 # TYPE avalanche_go_memstats_heap_objects gauge
-avalanche_go_memstats_heap_objects 136047
+avalanche_go_memstats_heap_objects 117369
 # HELP avalanche_go_memstats_heap_released_bytes Number of heap bytes released to OS.
 # TYPE avalanche_go_memstats_heap_released_bytes gauge
-avalanche_go_memstats_heap_released_bytes 4.718592e+06
+avalanche_go_memstats_heap_released_bytes 4.857856e+06
 # HELP avalanche_go_memstats_heap_sys_bytes Number of heap bytes obtained from system.
 # TYPE avalanche_go_memstats_heap_sys_bytes gauge
-avalanche_go_memstats_heap_sys_bytes 4.1025536e+07
+avalanche_go_memstats_heap_sys_bytes 4.5252608e+07
 # HELP avalanche_go_memstats_last_gc_time_seconds Number of seconds since 1970 of last garbage collection.
 # TYPE avalanche_go_memstats_last_gc_time_seconds gauge
-avalanche_go_memstats_last_gc_time_seconds 1.6759672010794737e+09
+avalanche_go_memstats_last_gc_time_seconds 1.6759673139394898e+09
 # HELP avalanche_go_memstats_lookups_total Total number of pointer lookups.
 # TYPE avalanche_go_memstats_lookups_total counter
 avalanche_go_memstats_lookups_total 0
 # HELP avalanche_go_memstats_mallocs_total Total number of mallocs.
 # TYPE avalanche_go_memstats_mallocs_total counter
-avalanche_go_memstats_mallocs_total 396743
+avalanche_go_memstats_mallocs_total 381643
 # HELP avalanche_go_memstats_mcache_inuse_bytes Number of bytes in use by mcache structures.
 # TYPE avalanche_go_memstats_mcache_inuse_bytes gauge
 avalanche_go_memstats_mcache_inuse_bytes 2400
@@ -4033,25 +4033,25 @@ avalanche_go_memstats_mcache_inuse_bytes 2400
 avalanche_go_memstats_mcache_sys_bytes 15600
 # HELP avalanche_go_memstats_mspan_inuse_bytes Number of bytes in use by mspan structures.
 # TYPE avalanche_go_memstats_mspan_inuse_bytes gauge
-avalanche_go_memstats_mspan_inuse_bytes 175824
+avalanche_go_memstats_mspan_inuse_bytes 165888
 # HELP avalanche_go_memstats_mspan_sys_bytes Number of bytes used for mspan structures obtained from system.
 # TYPE avalanche_go_memstats_mspan_sys_bytes gauge
 avalanche_go_memstats_mspan_sys_bytes 178992
 # HELP avalanche_go_memstats_next_gc_bytes Number of heap bytes when next garbage collection will take place.
 # TYPE avalanche_go_memstats_next_gc_bytes gauge
-avalanche_go_memstats_next_gc_bytes 4.1374648e+07
+avalanche_go_memstats_next_gc_bytes 5.4342056e+07
 # HELP avalanche_go_memstats_other_sys_bytes Number of bytes used for other system allocations.
 # TYPE avalanche_go_memstats_other_sys_bytes gauge
-avalanche_go_memstats_other_sys_bytes 513047
+avalanche_go_memstats_other_sys_bytes 727759
 # HELP avalanche_go_memstats_stack_inuse_bytes Number of bytes in use by the stack allocator.
 # TYPE avalanche_go_memstats_stack_inuse_bytes gauge
-avalanche_go_memstats_stack_inuse_bytes 851968
+avalanche_go_memstats_stack_inuse_bytes 884736
 # HELP avalanche_go_memstats_stack_sys_bytes Number of bytes obtained from system for stack allocator.
 # TYPE avalanche_go_memstats_stack_sys_bytes gauge
-avalanche_go_memstats_stack_sys_bytes 851968
+avalanche_go_memstats_stack_sys_bytes 884736
 # HELP avalanche_go_memstats_sys_bytes Number of bytes obtained from system.
 # TYPE avalanche_go_memstats_sys_bytes gauge
-avalanche_go_memstats_sys_bytes 5.38514e+07
+avalanche_go_memstats_sys_bytes 5.8307848e+07
 # HELP avalanche_go_threads Number of OS threads created.
 # TYPE avalanche_go_threads gauge
 avalanche_go_threads 9
@@ -5041,10 +5041,10 @@ avalanche_network_throttler_outbound_remaining_at_large_bytes 0
 avalanche_network_throttler_outbound_remaining_validator_bytes 0
 # HELP avalanche_network_time_since_last_msg_received Time (in ns) since the last msg was received
 # TYPE avalanche_network_time_since_last_msg_received gauge
-avalanche_network_time_since_last_msg_received 1.6759672010925896e+18
+avalanche_network_time_since_last_msg_received 1.675967313943047e+18
 # HELP avalanche_network_time_since_last_msg_sent Time (in ns) since the last msg was sent
 # TYPE avalanche_network_time_since_last_msg_sent gauge
-avalanche_network_time_since_last_msg_sent 1.6759672010925896e+18
+avalanche_network_time_since_last_msg_sent 1.675967313943047e+18
 # HELP avalanche_network_times_connected Times this node successfully completed a handshake with a peer
 # TYPE avalanche_network_times_connected counter
 avalanche_network_times_connected 0
@@ -5083,7 +5083,7 @@ avalanche_network_version_sent 0
 avalanche_network_version_sent_bytes 0
 # HELP avalanche_process_cpu_seconds_total Total user and system CPU time spent in seconds.
 # TYPE avalanche_process_cpu_seconds_total counter
-avalanche_process_cpu_seconds_total 0.51
+avalanche_process_cpu_seconds_total 0.46
 # HELP avalanche_process_max_fds Maximum number of open file descriptors.
 # TYPE avalanche_process_max_fds gauge
 avalanche_process_max_fds 32768
@@ -5092,13 +5092,13 @@ avalanche_process_max_fds 32768
 avalanche_process_open_fds 22
 # HELP avalanche_process_resident_memory_bytes Resident memory size in bytes.
 # TYPE avalanche_process_resident_memory_bytes gauge
-avalanche_process_resident_memory_bytes 8.7293952e+07
+avalanche_process_resident_memory_bytes 8.296448e+07
 # HELP avalanche_process_start_time_seconds Start time of the process since unix epoch in seconds.
 # TYPE avalanche_process_start_time_seconds gauge
-avalanche_process_start_time_seconds 1.67596719791e+09
+avalanche_process_start_time_seconds 1.67596731042e+09
 # HELP avalanche_process_virtual_memory_bytes Virtual memory size in bytes.
 # TYPE avalanche_process_virtual_memory_bytes gauge
-avalanche_process_virtual_memory_bytes 1.433501696e+09
+avalanche_process_virtual_memory_bytes 1.433759744e+09
 # HELP avalanche_process_virtual_memory_max_bytes Maximum amount of virtual memory available in bytes.
 # TYPE avalanche_process_virtual_memory_max_bytes gauge
 avalanche_process_virtual_memory_max_bytes 1.8446744073709552e+19
@@ -5131,7 +5131,7 @@ avalanche_requests_timeouts 0
 avalanche_resource_tracker_cpu_usage 0
 # HELP avalanche_resource_tracker_disk_available_space Available space remaining (bytes) on the database volume
 # TYPE avalanche_resource_tracker_disk_available_space gauge
-avalanche_resource_tracker_disk_available_space 3.5008401408e+10
+avalanche_resource_tracker_disk_available_space 3.5011149824e+10
 # HELP avalanche_resource_tracker_disk_reads Disk reads (bytes/sec) tracked by the resource manager
 # TYPE avalanche_resource_tracker_disk_reads gauge
 avalanche_resource_tracker_disk_reads 0
@@ -5140,4 +5140,4 @@ avalanche_resource_tracker_disk_reads 0
 avalanche_resource_tracker_disk_writes 0
 # HELP avalanche_resource_tracker_processing_time Tracked processing time over all nodes. Value expected to be in [0, number of CPU cores], but can go higher due to IO bound processes and thread multiplexing
 # TYPE avalanche_resource_tracker_processing_time gauge
-avalanche_resource_tracker_processing_time 4.865541997991079e-05
+avalanche_resource_tracker_processing_time 3.773176211591985e-05

@@ -47,7 +47,7 @@ jobs:
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PWD }}
         run: |
           python -m pip install --upgrade pip
-          pip install jinja-cli
+          pip install jinja-cli yq
 
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
             export name=$dir
@@ -55,7 +55,26 @@ jobs:
             export version_info=$( { docker run --rm -e RUN_ARGS=--version 0labs/$dir:$version; } 2>&1)
             export cli_args=$( { docker run --rm -e RUN_ARGS=--help 0labs/$dir:$version; } 2>&1)
 
-            jinja -E name -E version_info -E cli_args docs/dockerhub-readme.md.j2 -o dockerhub-readme-$dir.md
+            # render configs
+            export configs=""
+            confs=$(cat $dir/meta.yml | yq .example_config | sed "s/\"//g")
+            for c in $confs; do
+              wget $c
+              n=$(basename $c)
+              configs="${configs}\n--- $(echo $n)\n$(cat $n)"
+            done
+
+            # render metrics
+            network=local docker-compose up -d --build && sleep 5
+            export metrics=""
+            endpoints=$(cat $dir/meta.yml | yq .example_metrics | sed "s/\"//g")
+            for m in $endpoints; do
+              metrics="${metrics}$(curl $m)"
+            done
+            export logs=$(docker-compose logs --tail 50)
+            docker-compose down
+
+            jinja -E name -E version_info -E cli_args -E configs -E metrics -E logs docs/dockerhub-readme.md.j2 -o dockerhub-readme-$dir.md
         
             docker run --rm -v $(pwd)/dockerhub-readme-$dir.md:/data/README.md \
               -e DOCKERHUB_USR=$DOCKERHUB_USER \

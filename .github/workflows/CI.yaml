@@ -34,3 +34,56 @@ jobs:
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
             docker-compose -f $dir/docker-compose.yaml up -d --build
           done
+
+      - name: Update application Dockerhub READMEs
+        env:
+          DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USR }}
+          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PWD }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install jinja-cli yq
+
+          for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
+            export name=$dir
+            export version=$(cat $dir/version.txt)
+            export version_info=$( { docker run --rm -e RUN_ARGS=--version 0labs/$dir:$version; } 2>&1)
+            export cli_args=$( { docker run --rm -e RUN_ARGS=--help 0labs/$dir:$version; } 2>&1)
+
+            # render configs
+            export configs=""
+            confs=$(cat $dir/meta.yml | yq .example_config | sed "s/\"//g")
+            for c in $confs; do
+              wget $c
+              n=$(basename $c)
+              configs="${configs}\n--- $(echo $n)\n$(cat $n)"
+            done
+
+            # render metrics and logs
+            [ ! -d $dir/docs ] && mkdir $dir/docs
+            network=local docker-compose -f $dir/docker-compose.yaml up -d --build && sleep 5
+            export metrics=""
+            endpoints=$(cat $dir/meta.yml | yq .example_metrics | sed "s/\"//g")
+            for m in $endpoints; do
+              curl $m >> /tmp/$dir-$version-metrics.md
+            done
+            docker-compose -f $dir/docker-compose.yaml logs --tail 50 > $dir/docs/$version-logs.txt
+            docker-compose -f $dir/docker-compose.yaml down
+
+            cp /tmp/$dir-$version-metrics.md $dir/docs/$version-metrics.txt
+
+            jinja -E name -E version_info -E cli_args -o dockerhub-readme-$dir.md docs/dockerhub-readme.md.j2
+        
+            docker run --rm -v $(pwd)/dockerhub-readme-$dir.md:/data/README.md \
+              -e DOCKERHUB_USR=$DOCKERHUB_USER \
+              -e DOCKERHUB_PWD=$DOCKERHUB_PASSWORD \
+              -e DOCKERHUB_ORG=0labs \
+              -e DOCKERHUB_REPO=$dir gofunky/readmyhub:stable
+          done
+
+      - name: Commit documentation updates
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actor
+          message: 'O1bot: commiting documentation updates'
+          add: '*.txt'
+          new_branch: bot_docs_update

@@ -1,0 +1,8 @@
+network="mainnet"
+rpc-http-enabled=true
+rpc-ws-enabled=true
+rpc-http-host="0.0.0.0"
+rpc-http-cors-origins=["all"]
+metrics-enabled=true
+host-allowlist=["*"]
+data-path="/data"

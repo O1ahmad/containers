@@ -1,0 +1,21 @@
+# @format
+
+version: "3.4"
+
+volumes:
+  besu-data:
+
+services:
+  besu:
+    build: .
+    container_name: besu
+    environment:
+      RUN_ARGS: "--config-file=/config/besu.toml"
+    ports:
+      - 8545:8545/tcp
+      - 8551:8551/tcp
+      - 9545:9545/tcp
+    volumes:
+      - ./config/${network:-mainnet}:/config
+      - "${host_data_dir:-besu-data}:/data"
+    restart: unless-stopped

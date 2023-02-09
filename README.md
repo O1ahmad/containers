@@ -13,6 +13,7 @@ Containerized Web3 and Cloud-Native applications
 | name | description | image |
 | :---: | :---: | :---: |
 | [avalanchego](./avalanchego) | Go implementation of an Avalanche node | [![avalanchego](https://img.shields.io/docker/v/0labs/avalanchego)](https://hub.docker.com/repository/docker/0labs/avalanchego) |
+| [besu](./besu) | an open source Ethereum client developed under the Apache 2.0 license and written in Java | [![besu](https://img.shields.io/docker/v/0labs/besu)](https://hub.docker.com/repository/docker/0labs/besu) |
 | [bitcoind](./bitcoind) | Client software for running a Bitcoin Core node | [![bitcoind](https://img.shields.io/docker/v/0labs/bitcoind)](https://hub.docker.com/repository/docker/0labs/bitcoind) |
 | [bitcoin-abcd](./bitcoin-abcd) | Node software for the Bitcoin Cash/eCash project | [![bitcoin-abcd](https://img.shields.io/docker/v/0labs/bitcoin-abcd?color=blue)](https://hub.docker.com/repository/docker/0labs/bitcoin-abcd) |
 | [dogecoind](./bitcoin-abcd) | Node software for the Dogecoin community driven cryptocurrency project | [![dogecoind](https://img.shields.io/docker/v/0labs/dogecoind?color=blue)](https://hub.docker.com/repository/docker/0labs/dogecoind) |

@@ -1,0 +1,51 @@
+Attaching to avalanchego
+[36mavalanchego    |[0m INFO [02-09|18:42:51.802] <C Chain> github.com/ava-labs/coreth/core/blockchain.go:693: Loaded most recent local full block number=0 hash=b81c22..0e6bb9 age=53y10mo2w
+[36mavalanchego    |[0m INFO [02-09|18:42:51.802] <C Chain> github.com/ava-labs/coreth/core/blockchain.go:1721: Loaded Acceptor tip hash=000000..000000
+[36mavalanchego    |[0m INFO [02-09|18:42:51.802] <C Chain> github.com/ava-labs/coreth/core/blockchain.go:1729: Skipping state reprocessing root=3cbfcc..68c8b4
+[36mavalanchego    |[0m INFO [02-09|18:42:51.802] <C Chain> github.com/ava-labs/coreth/core/blockchain.go:1703: Initializing snapshots async=false rebuild=true headHash=b81c22..0e6bb9 headRoot=3cbfcc..68c8b4
+[36mavalanchego    |[0m WARN [02-09|18:42:51.802] <C Chain> github.com/ava-labs/coreth/core/state/snapshot/snapshot.go:219: Failed to load snapshot, regenerating err="missing or corrupted snapshot, no snapshot block hash"
+[36mavalanchego    |[0m INFO [02-09|18:42:51.802] <C Chain> github.com/ava-labs/coreth/core/state/snapshot/snapshot.go:773: Rebuilding state snapshot 
+[36mavalanchego    |[0m INFO [02-09|18:42:51.802] <C Chain> github.com/ava-labs/coreth/core/state/snapshot/snapshot.go:354: Waiting for snapshot generation root=3cbfcc..68c8b4
+[36mavalanchego    |[0m INFO [02-09|18:42:51.802] <C Chain> github.com/ava-labs/coreth/core/state/snapshot/generate.go:125: Wiper running, state snapshotting paused accounts=0 slots=0 storage=0.00B elapsed="253.007µs"
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/core/state/snapshot/wipe.go:133: Deleted state snapshot leftovers kind=accounts wiped=0 elapsed="16.4µs"
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/core/state/snapshot/wipe.go:133: Deleted state snapshot leftovers kind=storage  wiped=0 elapsed="6.5µs"
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/core/state/snapshot/generate.go:394: Generated state snapshot accounts=1 slots=0 storage=50.00B elapsed="96.502µs"
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/core/blockchain.go:526: Not warming accepted cache because there are no accepted blocks 
+[36mavalanchego    |[0m WARN [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/core/rawdb/accessors_metadata.go:111: Error reading unclean shutdown markers error="not found"
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/core/tx_pool.go:503: Transaction pool price threshold updated price=470,000,000,000
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/core/tx_pool.go:503: Transaction pool price threshold updated price=225,000,000,000
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/core/tx_pool.go:503: Transaction pool price threshold updated price=0
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/plugin/evm/atomic_tx_repository.go:115: Initializing atomic transaction repository from scratch 
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/plugin/evm/atomic_tx_repository.go:191: Completed atomic transaction repository migration lastAcceptedHeight=0 duration="31.801µs"
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/plugin/evm/atomic_tx_repository.go:438: atomic tx repository RepairForBonusBlocks complete repairedEntries=0
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/plugin/evm/atomic_backend.go:132: initializing atomic trie lastCommittedHeight=0
+[36mavalanchego    |[0m INFO [02-09|18:42:51.803] <C Chain> github.com/ava-labs/coreth/plugin/evm/atomic_backend.go:210: finished initializing atomic trie lastAcceptedHeight=0 lastAcceptedAtomicRoot=56e81f..63b421 heightsIndexed=0 lastCommittedRoot=56e81f..63b421 lastCommittedHeight=0 time="23.2µs"
+[36mavalanchego    |[0m [02-09|18:42:51.804] INFO <C Chain> proposervm/vm.go:356 block height index was successfully verified
+[36mavalanchego    |[0m [02-09|18:42:51.804] INFO <C Chain> snowman/transitive.go:86 initializing consensus engine
+[36mavalanchego    |[0m [02-09|18:42:51.804] INFO <C Chain> bootstrap/bootstrapper.go:122 starting bootstrapper
+[36mavalanchego    |[0m [02-09|18:42:51.804] INFO chains/manager.go:300 creating chain {"subnetID": "11111111111111111111111111111111LpoYY", "chainID": "2eNy1mUFdmaxXNj1eQHUe7Np4gju9sJsEtWQ4MX3ToiNKuADed", "vmID": "jvYyfQTxGMJLuGWa55kdP2p2zSUYsQ5Raupu4TW34ZAUBAbtq"}
+[36mavalanchego    |[0m [02-09|18:42:51.805] INFO <X Chain> avm/vm.go:516 initializing genesis asset {"txID": "2fombhL7aGPwj3KH4bfrmJwW6PVnMobf9Y2fn9GwxiAAJyFDbe"}
+[36mavalanchego    |[0m [02-09|18:42:51.805] INFO <X Chain> avm/vm.go:499 fee asset is established {"alias": "AVAX", "assetID": "2fombhL7aGPwj3KH4bfrmJwW6PVnMobf9Y2fn9GwxiAAJyFDbe"}
+[36mavalanchego    |[0m [02-09|18:42:51.805] INFO <X Chain> avm/vm.go:245 address transaction indexing is disabled
+[36mavalanchego    |[0m [02-09|18:42:51.806] INFO <X Chain> avalanche/transitive.go:80 initializing consensus engine
+[36mavalanchego    |[0m [02-09|18:42:51.806] INFO <X Chain> bootstrap/bootstrapper.go:323 starting bootstrap
+[36mavalanchego    |[0m INFO [02-09|18:42:51.806] <C Chain> github.com/ava-labs/coreth/core/blockchain.go:549: Starting Acceptor queue length=64
+[36mavalanchego    |[0m [02-09|18:42:51.807] INFO <C Chain> common/bootstrapper.go:244 bootstrapping started syncing {"numVerticesInFrontier": 1}
+[36mavalanchego    |[0m [02-09|18:42:51.807] INFO <C Chain> bootstrap/bootstrapper.go:549 executing blocks {"numPendingJobs": 0}
+[36mavalanchego    |[0m [02-09|18:42:51.807] INFO <C Chain> queue/jobs.go:224 executed operations {"numExecuted": 0}
+[36mavalanchego    |[0m [02-09|18:42:51.807] INFO <C Chain> bootstrap/bootstrapper.go:595 waiting for the remaining chains in this subnet to finish syncing
+[36mavalanchego    |[0m INFO [02-09|18:42:51.807] <C Chain> github.com/ava-labs/coreth/plugin/evm/vm.go:1213: Enabled APIs: eth, eth-filter, net, web3, internal-eth, internal-blockchain, internal-transaction, avax 
+[36mavalanchego    |[0m [02-09|18:42:51.807] INFO server/server.go:270 adding route {"url": "/ext/bc/2CA6j5zYzasynPsFeNoqWkmTCt3VScMvXUZHbfDJ8k3oGzAPtU", "endpoint": "/avax"}
+[36mavalanchego    |[0m [02-09|18:42:51.807] INFO server/server.go:270 adding route {"url": "/ext/bc/2CA6j5zYzasynPsFeNoqWkmTCt3VScMvXUZHbfDJ8k3oGzAPtU", "endpoint": "/rpc"}
+[36mavalanchego    |[0m [02-09|18:42:51.807] INFO server/server.go:270 adding route {"url": "/ext/bc/2CA6j5zYzasynPsFeNoqWkmTCt3VScMvXUZHbfDJ8k3oGzAPtU", "endpoint": "/ws"}
+[36mavalanchego    |[0m [02-09|18:42:51.808] INFO server/server.go:270 adding route {"url": "/ext/bc/2eNy1mUFdmaxXNj1eQHUe7Np4gju9sJsEtWQ4MX3ToiNKuADed", "endpoint": "/events"}
+[36mavalanchego    |[0m [02-09|18:42:51.808] INFO server/server.go:270 adding route {"url": "/ext/bc/2eNy1mUFdmaxXNj1eQHUe7Np4gju9sJsEtWQ4MX3ToiNKuADed", "endpoint": ""}
+[36mavalanchego    |[0m [02-09|18:42:51.808] INFO server/server.go:270 adding route {"url": "/ext/bc/2eNy1mUFdmaxXNj1eQHUe7Np4gju9sJsEtWQ4MX3ToiNKuADed", "endpoint": "/wallet"}
+[36mavalanchego    |[0m [02-09|18:42:51.808] INFO <X Chain> common/bootstrapper.go:244 bootstrapping started syncing {"numVerticesInFrontier": 0}
+[36mavalanchego    |[0m [02-09|18:42:51.808] INFO <X Chain> bootstrap/bootstrapper.go:550 executing transactions
+[36mavalanchego    |[0m [02-09|18:42:51.808] INFO <X Chain> queue/jobs.go:224 executed operations {"numExecuted": 0}
+[36mavalanchego    |[0m [02-09|18:42:51.808] INFO <X Chain> bootstrap/bootstrapper.go:567 executing vertices
+[36mavalanchego    |[0m [02-09|18:42:51.808] INFO <X Chain> queue/jobs.go:224 executed operations {"numExecuted": 0}
+[36mavalanchego    |[0m [02-09|18:42:51.808] INFO <X Chain> avalanche/transitive.go:374 consensus starting {"lenFrontier": 0}
+[36mavalanchego    |[0m [02-09|18:42:51.808] INFO <C Chain> snowman/transitive.go:444 consensus starting {"lastAcceptedBlock": "2Q5qkGvLuJyg7UAp1khitQ2WUScBzEjiUf68T8sQYjUm7U97xS"}
+[36mavalanchego    |[0m [02-09|18:42:51.808] INFO <P Chain> snowman/transitive.go:444 consensus starting {"lastAcceptedBlock": "2cC67R6vPRSX4BCAY3ouAk9JKCCpAxjFxRVUQWfnEQF1BjQhqX"}

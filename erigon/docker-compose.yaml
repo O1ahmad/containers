@@ -10,7 +10,7 @@ services:
     build: .
     container_name: erigon
     environment:
-      RUN_ARGS: "--config=/config/erigon.yaml"
+      RUN_ARGS: "--config=/config/erigon.yaml --metrics --metrics.addr=0.0.0.0"
     ports:
       - 8545:8545/tcp
       - 8551:8551/tcp

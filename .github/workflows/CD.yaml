@@ -68,10 +68,10 @@ jobs:
               cat $n >> /tmp/$dir-$version-configs.dat
               echo "--------------" >> /tmp/$dir-$version-configs.dat
             done
-            cp /tmp/$dir-$version-configs.dat $dir/docs/$version/configs.dat
+            cp /tmp/$dir-$version-configs.dat $dir/docs/$version/configs.dat || true
 
             # render metrics and logs
-            network=local docker-compose -f $dir/docker-compose.yaml up -d --build && sleep 5
+            network=local docker-compose -f $dir/docker-compose.yaml up -d --build && sleep 30
             export metrics=""
             endpoints=$(cat $dir/meta.yml | yq .example_metrics | sed "s/\"//g")
             for m in $endpoints; do

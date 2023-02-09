@@ -1,0 +1,34 @@
+Attaching to erigon
+[36merigon    |[0m Starting erigon - run arguments: --config=/config/erigon.yaml --metrics --metrics.addr=0.0.0.0
+[36merigon    |[0m [WARN] [02-09|21:33:52.051] no log dir set, console logging only 
+[36merigon    |[0m [INFO] [02-09|21:33:52.051] Starting metrics server                  addr=http://0.0.0.0:6060/debug/metrics/prometheus
+[36merigon    |[0m [WARN] [02-09|21:33:52.058] no log dir set, console logging only 
+[36merigon    |[0m [INFO] [02-09|21:33:52.058] Build info                               git_branch=HEAD git_tag=v2.37.0 git_commit=12419c759162fdba03e645d0cb8d21e582e067a5
+[36merigon    |[0m [INFO] [02-09|21:33:52.058] Starting Erigon in ephemeral dev mode... 
+[36merigon    |[0m [INFO] [02-09|21:33:52.059] Maximum peer count                       ETH=100 total=100
+[36merigon    |[0m [INFO] [02-09|21:33:52.059] Development chain flags set              --nodiscover=true --v5disc=false --port=:0
+[36merigon    |[0m [INFO] [02-09|21:33:52.059] starting HTTP APIs                       APIs=eth,erigon,web3,debug,trace,txpool,net
+[36merigon    |[0m [INFO] [02-09|21:33:52.059] torrent verbosity                        level=WRN
+[36merigon    |[0m [INFO] [02-09|21:33:54.164] Set global gas cap                       cap=50000000
+[36merigon    |[0m [INFO] [02-09|21:33:54.165] Using developer account                  address=0x67b1d87101671b127f5f8714789C7192f7ad340e
+[36merigon    |[0m [INFO] [02-09|21:33:54.165] Using custom developer period            seconds=0
+[36merigon    |[0m [INFO] [02-09|21:33:54.165] [Downloader] Runnning with               ipv6-enabled=true ipv4-enabled=true download.rate=16mb upload.rate=4mb
+[36merigon    |[0m [INFO] [02-09|21:33:54.166] Opening Database                         label=chaindata path=/data/chaindata
+[36merigon    |[0m [INFO] [02-09|21:33:54.171] Initialised chain configuration          config="{ChainID: 1337, Homestead: 0, DAO: <nil>, DAO Support: false, Tangerine Whistle: 0, Spurious Dragon: 0, Byzantium: 0, Constantinople: 0, Petersburg: 0, Istanbul: 0, Muir Glacier: 0, Berlin: 0, London: 0, Arrow Glacier: <nil>, Gray Glacier: <nil>, Terminal Total Difficulty: <nil>, Merge Netsplit: <nil>, Shanghai: <nil>, Cancun: <nil>, Engine: clique}" genesis=0xc493151b4991dd1bf459952509bba9bc3fb2b706299e18e36e6b78781835065d
+[36merigon    |[0m [INFO] [02-09|21:33:54.171] Effective                                prune_flags= snapshot_flags="--snapshots=true" history.v3=false
+[36merigon    |[0m [INFO] [02-09|21:33:54.175] Initialising Ethereum protocol           network=1337
+[36merigon    |[0m [INFO] [02-09|21:33:54.184] Starting private RPC server              on=127.0.0.1:9090
+[36merigon    |[0m [INFO] [02-09|21:33:54.184] new subscription to logs established 
+[36merigon    |[0m [INFO] [02-09|21:33:54.184] rpc filters: subscribing to Erigon events 
+[36merigon    |[0m [INFO] [02-09|21:33:54.185] new subscription to newHeaders established 
+[36merigon    |[0m [INFO] [02-09|21:33:54.185] New txs subscriber joined 
+[36merigon    |[0m [INFO] [02-09|21:33:54.185] Reading JWT secret                       path=/data/jwt.hex
+[36merigon    |[0m [INFO] [02-09|21:33:54.187] HTTP endpoint opened for Engine API      url=localhost:8551 ws=true ws.compression=true
+[36merigon    |[0m [INFO] [02-09|21:33:54.188] HTTP endpoint opened                     url=0.0.0.0:8545 ws=false ws.compression=true grpc=false
+[36merigon    |[0m [INFO] [02-09|21:33:54.193] Started P2P networking                   version=66 self="enode://43762c7bc71f5765c08c381c1979e59c3626e7913d66d5f874a4a3702b08914ef0d33e2c13b4c1e7d87ca6eaa2395ac9c656aef72f146b5bdfe2ac726d334dd7@127.0.0.1:30303?discport=0" name=erigon/v2.37.0-stable-12419c75/linux-amd64/go1.19.5
+[36merigon    |[0m [INFO] [02-09|21:33:54.195] [txpool] Started 
+[36merigon    |[0m [INFO] [02-09|21:33:54.195] [1/15 Snapshots] Fetching torrent files metadata 
+[36merigon    |[0m [INFO] [02-09|21:33:54.196] [Snapshots] Blocks Stat                  blocks=0k indices=0k alloc=44.8MB sys=69.9MB
+[36merigon    |[0m [INFO] [02-09|21:33:54.196] Started P2P networking                   version=67 self="enode://43762c7bc71f5765c08c381c1979e59c3626e7913d66d5f874a4a3702b08914ef0d33e2c13b4c1e7d87ca6eaa2395ac9c656aef72f146b5bdfe2ac726d334dd7@127.0.0.1:30304?discport=0" name=erigon/v2.37.0-stable-12419c75/linux-amd64/go1.19.5
+[36merigon    |[0m [INFO] [02-09|21:33:54.197] [2/15 Headers] Waiting for headers...    from=0
+[36merigon    |[0m [INFO] [02-09|21:34:14.198] [2/15 Headers] No block headers to write in this log period block number=0

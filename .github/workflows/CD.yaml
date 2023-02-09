@@ -50,13 +50,14 @@ jobs:
           pip install jinja-cli yq
 
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            [ ! -d $dir/docs ] && mkdir $dir/docs
-
             export name=$dir
             export version=$(cat $dir/version.txt)
+
+            [ ! -d $dir/docs/$version ] && mkdir -p $dir/docs/$version
+
             export version_info=$( { docker run --rm -e RUN_ARGS=--version 0labs/$dir:$version; } 2>&1)
-            docker run --rm -e RUN_ARGS=--help 0labs/$dir:$version &> $dir/docs/$version-args.dat
-            export cli_args=$(cat $dir/docs/$version-args.dat)
+            docker run --rm -e RUN_ARGS=--help 0labs/$dir:$version &> $dir/docs/$version/args.dat
+            export cli_args=$(cat $dir/docs/$version/args.dat)
 
             # render configs
             export configs=""
@@ -64,8 +65,10 @@ jobs:
             for c in $confs; do
               wget $c
               n=$(basename $c)
-              configs="${configs}\n--- $(echo $n)\n$(cat $n)"
+              cat $n >> /tmp/$dir-$version-configs.dat
+              echo "--------------" >> /tmp/$dir-$version-configs.dat
             done
+            cp /tmp/$dir-$version-configs.md $dir/docs/$version/configs.dat
 
             # render metrics and logs
             network=local docker-compose -f $dir/docker-compose.yaml up -d --build && sleep 5
@@ -74,10 +77,10 @@ jobs:
             for m in $endpoints; do
               curl $m >> /tmp/$dir-$version-metrics.md
             done
-            docker-compose -f $dir/docker-compose.yaml logs --tail 50 > $dir/docs/$version-logs.dat
-            docker-compose -f $dir/docker-compose.yaml down
+            cp /tmp/$dir-$version-metrics.md $dir/docs/$version/metrics.dat
 
-            cp /tmp/$dir-$version-metrics.md $dir/docs/$version-metrics.dat
+            docker-compose -f $dir/docker-compose.yaml logs --tail 50 > $dir/docs/$version/logs.dat
+            docker-compose -f $dir/docker-compose.yaml down
 
             jinja -E name -E version_info -E cli_args -o dockerhub-readme-$dir.md docs/dockerhub-readme.md.j2
         

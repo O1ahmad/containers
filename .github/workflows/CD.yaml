@@ -68,7 +68,7 @@ jobs:
               cat $n >> /tmp/$dir-$version-configs.dat
               echo "--------------" >> /tmp/$dir-$version-configs.dat
             done
-            cp /tmp/$dir-$version-configs.md $dir/docs/$version/configs.dat
+            cp /tmp/$dir-$version-configs.dat $dir/docs/$version/configs.dat
 
             # render metrics and logs
             network=local docker-compose -f $dir/docker-compose.yaml up -d --build && sleep 5

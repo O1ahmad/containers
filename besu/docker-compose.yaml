@@ -2,20 +2,25 @@
 
 version: "3.4"
 
-volumes:
-  besu-data:
-
 services:
   besu:
     build: .
     container_name: besu
     environment:
-      RUN_ARGS: "--config-file=/config/besu.toml"
+      RUN_ARGS: "--config-file=/config/besu.toml --metrics-host=0.0.0.0"
     ports:
       - 8545:8545/tcp
-      - 8551:8551/tcp
+      - 18551:8551/tcp
       - 9545:9545/tcp
+    networks:
+      - shared
     volumes:
       - ./config/${network:-mainnet}:/config
       - "${host_data_dir:-besu-data}:/data"
     restart: unless-stopped
+
+networks:
+  shared:
+
+volumes:
+  besu-data:

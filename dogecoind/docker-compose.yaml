@@ -1,8 +1,5 @@
 version: "3.4"
 
-volumes:
-  dogecoind-data:
-
 services:
   dogecoind:
     build: .
@@ -12,7 +9,15 @@ services:
     ports:
       - 28332:8332/tcp
       - 28334:8334/tcp
+    networks:
+      - shared
     volumes:
       - ./config/${network:-mainnet}:/config
       - "${host_data_dir:-dogecoind-data}:/data"
     restart: unless-stopped
+
+networks:
+  shared:
+
+volumes:
+  dogecoind-data:

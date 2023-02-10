@@ -1,14 +1,13 @@
 version: "3.4"
 
-volumes:
-  bitcoin-abc-data:
-
 services:
   bitcoin-abc:
     build: .
     container_name: bitcoin-abc
     environment:
       RUN_ARGS: "-conf=/config/bitcoin-abc.conf -datadir=/data"
+    networks:
+      - shared
     ports:
       - 18332:8332/tcp
       - 18334:8334/tcp
@@ -16,3 +15,9 @@ services:
       - ./config/${network:-mainnet}:/config
       - "${host_data_dir:-bitcoin-abc-data}:/data"
     restart: unless-stopped
+
+networks:
+  shared:
+
+volumes:
+  bitcoin-abc-data:

@@ -1,8 +1,5 @@
 version: "3.4"
 
-volumes:
-  gaia-data:
-
 services:
   gaia:
     build: .
@@ -14,7 +11,15 @@ services:
       - 26657:26657/tcp
       - 1317:1317/tcp
       - 26660:26660/tcp
+    networks:
+      - shared
     volumes:
       - "./config/${network:-mainnet}:/config"
       - "${host_data_dir:-gaia-data}:/root/.gaia"
     restart: unless-stopped
+
+networks:
+  shared:
+
+volumes:
+  gaia-data:

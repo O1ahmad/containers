@@ -4,5 +4,6 @@ rpc-ws-enabled=true
 rpc-http-host="0.0.0.0"
 rpc-http-cors-origins=["all"]
 metrics-enabled=true
+metrics-host="0.0.0.0"
 host-allowlist=["*"]
 data-path="/data"

@@ -7,10 +7,10 @@ services:
     build: .
     container_name: besu
     environment:
-      RUN_ARGS: "--config-file=/config/besu.toml"
+      RUN_ARGS: "--config-file=/config/besu.toml --metrics-host=0.0.0.0"
     ports:
       - 8545:8545/tcp
-      - 8551:8551/tcp
+      - 18551:8551/tcp
       - 9545:9545/tcp
     networks:
       - shared

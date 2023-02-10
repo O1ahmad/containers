@@ -2,9 +2,6 @@
 
 version: "3.4"
 
-volumes:
-  erigon-data:
-
 services:
   erigon:
     build: .
@@ -15,7 +12,15 @@ services:
       - 8545:8545/tcp
       - 8551:8551/tcp
       - 6060:6060/tcp
+    networks:
+      - shared
     volumes:
       - ./config/${network:-mainnet}:/config
       - "${host_data_dir:-erigon-data}:/data"
     restart: unless-stopped
+
+networks:
+  shared:
+
+volumes:
+  erigon-data:

@@ -1,8 +1,5 @@
 version: "3.4"
 
-volumes:
-  avalanchego-data:
-
 services:
   avalanchego:
     build: .
@@ -11,7 +8,15 @@ services:
       RUN_ARGS: "--config-file=/config/config.json --chain-config-dir=/config/C"
     ports:
       - 9650:9650/tcp
+    networks:
+      - shared
     volumes:
       - ./config/${network:-mainnet}:/config
       - "${host_data_dir:-avalanchego-data}:/root/.avalanchego"
     restart: unless-stopped
+
+networks:
+  shared:
+
+volumes:
+  avalanchego-data:

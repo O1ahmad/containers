@@ -1,8 +1,5 @@
 version: "3.4"
 
-volumes:
-  bitcoind-data:
-
 services:
   bitcoind:
     build: .
@@ -12,7 +9,15 @@ services:
     ports:
       - 8332:8332/tcp
       - 8334:8334/tcp
+    networks:
+      - shared
     volumes:
       - ./config/${network:-mainnet}:/config
       - "${host_data_dir:-bitcoind-data}:/data"
     restart: unless-stopped
+
+networks:
+  shared:
+
+volumes:
+  bitcoind-data:

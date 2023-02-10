@@ -1,12 +1,5 @@
 version: "3.4"
 
-networks:
-  lodestar:
-
-volumes:
-  lodestar-beacon:
-  lodestar-validator:
-
 services:
   lodestar-beacon:
     build: .
@@ -17,7 +10,7 @@ services:
       - 9596:9596/tcp
       - 8008:8008/tcp
     networks:
-      - lodestar
+      - shared
     volumes:
       - ./config/${network:-mainnet}/beacon.yml:/config/config.yml
       - "${host_data_dir:-lodestar-beacon}:/data"
@@ -29,8 +22,15 @@ services:
     environment:
       RUN_ARGS: "validator --rcConfig=/config/config.yml --dataDir=/data"
     networks:
-      - lodestar
+      - shared
     volumes:
       - ./config/${network:-mainnet}/validator.yml:/config/config.yml
       - "${host_data_dir:-lodestar-validator}:/data"
     restart: unless-stopped
+
+networks:
+  shared:
+
+volumes:
+  lodestar-beacon:
+  lodestar-validator:

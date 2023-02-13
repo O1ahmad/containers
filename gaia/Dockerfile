@@ -1,4 +1,4 @@
-ARG VERSION=v8.0.0
+ARG VERSION=8.0.0
 
 # ******* Stage: setup ******* #
 FROM golang:1.18.0-buster AS setup
@@ -11,7 +11,7 @@ WORKDIR /go/src
 
 RUN apt update && apt install -y --no-install-recommends git make
 
-RUN git clone -b ${VERSION} https://github.com/cosmos/gaia && cd gaia && make install
+RUN git clone -b "v${VERSION}" https://github.com/cosmos/gaia && cd gaia && make install
 
 # ******* Stage: release ******* #
 FROM debian:stable

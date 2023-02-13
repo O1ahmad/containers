@@ -26,6 +26,7 @@ jobs:
 
               echo "latest version: $latest_version"
               echo "current version: $version"
+
               if [[ "$version" != "$latest_version" ]]; then
                 echo "Version mismatch found."
 

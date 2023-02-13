@@ -1,6 +1,5 @@
 version: v2.37.0
-cli_help:  >-
-  --help
-example_config:
-example_metrics: >-
-  127.0.0.1:6060/debug/metrics/prometheus
+latest_release_url: https://api.github.com/repos/ledgerwatch/erigon/releases/latest
+cli_help: --help
+example_config: null
+example_metrics: 127.0.0.1:6060/debug/metrics/prometheus

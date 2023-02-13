@@ -1,7 +1,5 @@
 version: 22.10.3
-cli_help:  >-
-  --help
-example_config: >-
-  https://raw.githubusercontent.com/hyperledger/besu/main/besu/src/test/resources/everything_config.toml
-example_metrics: >-
-  127.0.0.1:9545/metrics
+latest_release_url: https://api.github.com/repos/hyperledger/besu/releases/latest
+cli_help: --help
+example_config: https://raw.githubusercontent.com/hyperledger/besu/main/besu/src/test/resources/everything_config.toml
+example_metrics: 127.0.0.1:9545/metrics

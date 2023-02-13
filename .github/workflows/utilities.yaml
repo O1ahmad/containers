@@ -28,6 +28,9 @@ jobs:
               echo "current version: $version"
               if [[ "$version" != "$latest_version" ]]; then
                 echo "Version mismatch found."
+
+                # TODO: remove once version.txt has been deprecated
+                echo $latest_version > $dir/version.txt
                 yq -yi ".version=$latest_version" $dir/meta.yml
               fi
             fi

@@ -35,3 +35,25 @@ jobs:
             docker-compose -f $dir/docker-compose.yaml up -d --build
             docker-compose -f $dir/docker-compose.yaml down
           done
+      - name: Update application Dockerhub READMEs
+        env:
+          DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USR }}
+          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PWD }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install jinja-cli
+          for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
+            export name=$dir
+            export version="$(cat $dir/version.txt)"
+            echo "Version: ${version}"
+
+            export version_info="$(docker run --rm -e RUN_ARGS=--version 0labs/$dir:$version 2>&1)"
+            export cli_args="$(docker run --rm -e RUN_ARGS=--help 0labs/$dir:$version 2>&1)"
+            jinja -E name -E version_info -E cli_args docs/dockerhub-readme.md.j2 -o /tmp/$dir-dockerhub-readme.md
+            docker run --name hub-update -v /tmp/$dir-dockerhub-readme.md:/d/README.md \
+              -e DOCKERHUB_USR=$DOCKERHUB_USER \
+              -e DOCKERHUB_PWD=$DOCKERHUB_PASSWORD \
+              -e DOCKERHUB_ORG=0labs \
+              -e README_PATH=/d/README.md \
+              -e DOCKERHUB_REPO=$dir gofunky/readmyhub:stable
+          done

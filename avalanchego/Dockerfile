@@ -1,4 +1,4 @@
-ARG VERSION=v1.9.8
+ARG VERSION=1.9.8
 
 # ******* Stage: setup ******* #
 FROM debian:stable AS setup
@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends wget apt-transp
 
 WORKDIR /avalanche
 
-RUN wget "https://github.com/ava-labs/avalanchego/releases/download/${VERSION}/avalanchego-linux-amd64-${VERSION}.tar.gz" \
-    && tar -xvf avalanchego-linux-amd64-${VERSION}.tar.gz
+RUN wget "https://github.com/ava-labs/avalanchego/releases/download/v${VERSION}/avalanchego-linux-amd64-v${VERSION}.tar.gz" \
+    && tar -xvf avalanchego-linux-amd64-v${VERSION}.tar.gz
 
 # ******* Stage: release ******* #
 FROM debian:stable
@@ -21,7 +21,7 @@ ARG VERSION
 
 RUN apt update && apt install --yes --no-install-recommends tini
 
-COPY --from=setup /avalanche/avalanchego-${VERSION}/ /usr/local/bin
+COPY --from=setup /avalanche/avalanchego-v${VERSION}/ /usr/local/bin
 COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 
 # default ports

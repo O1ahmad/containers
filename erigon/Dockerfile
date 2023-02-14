@@ -1,4 +1,4 @@
-ARG VERSION=v2.37.0
+ARG VERSION=2.37.0
 
 # ******* Stage: setup ******* #
 FROM golang:1.19.5-buster AS setup
@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends git make apt-tr
 WORKDIR /
 
 # Installing Erigon
-RUN git clone -b ${VERSION} --recurse-submodules -j8 --progress https://github.com/ledgerwatch/erigon && cd erigon && make erigon
+RUN git clone -b "v${VERSION}" --recurse-submodules -j8 --progress https://github.com/ledgerwatch/erigon && cd erigon && make erigon
 
 # ******* Stage: release ******* #
 FROM debian:stable

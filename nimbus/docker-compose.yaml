@@ -1,0 +1,42 @@
+version: "3.4"
+
+services:
+  nimbus-beacon:
+    build: .
+    container_name: nimbus-beacon
+    environment:
+      RUN_ARGS: "--config-file=/config/config.toml --data-dir=/data"
+    ports:
+      - 9000:9000/tcp
+      - 9000:9000/udp
+      - 5052:5052/tcp
+      - 8008:8008/tcp
+    networks:
+      - shared
+    volumes:
+      - ./config/${network:-mainnet}/beacon.toml:/config/config.toml
+      - "${host_data_dir:-nimbus-beacon}:/data"
+    restart: unless-stopped
+
+  nimbus-validator:
+    build: .
+    container_name: nimbus-validator
+    command: [ "nimbus_validator_client" ]
+    environment:
+      RUN_ARGS: "--config-file=/config/config.toml --data-dir=/data --beacon-node=http://nimbus-beacon:5052"
+    ports:
+      - 15052:5052/tcp
+      - 8108:8108/tcp
+    networks:
+      - shared
+    volumes:
+      - ./config/${network:-mainnet}/validator.toml:/config/config.toml
+      - "${host_data_dir:-nimbus-validator}:/data"
+    restart: unless-stopped
+
+networks:
+  shared:
+
+volumes:
+  nimbus-beacon:
+  nimbus-validator:

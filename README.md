@@ -20,7 +20,7 @@ Containerized Web3 and Cloud-Native applications
 | [erigon](./erigon) | an implementation of Ethereum (execution client), on the efficiency frontier, written in Go | [![erigon](https://img.shields.io/docker/v/0labs/erigon?color=blue)](https://hub.docker.com/repository/docker/0labs/erigon) |
 | [litecoind](./litecoin) | Node software for the Litecoin digital currency payments network | [![litecoin](https://img.shields.io/docker/v/0labs/litecoin?color=blue)](https://hub.docker.com/repository/docker/0labs/litecoin) |
 | [lodestar](./lodestar) | an open-source Ethereum Consensus client and Typescript ecosystem | [![lodestar](https://img.shields.io/docker/v/0labs/lodestar?color=blue)](https://hub.docker.com/repository/docker/0labs/lodestar) |
-| [nimbus](./nimbus) | a concensus client for the Ethereum network that is lightweight, secure and easy to use | [![nimbus](https://img.shields.io/docker/v/0labs/nimbus?color=blue)](https://hub.docker.com/repository/docker/0labs/nimbus) |
+| [nimbus](./nimbus) | a lightweight Ethereum consensus client developed by the Status Network | [![nimbus](https://img.shields.io/docker/v/0labs/nimbus?color=blue)](https://hub.docker.com/repository/docker/0labs/nimbus) |
 
 #### Options
 

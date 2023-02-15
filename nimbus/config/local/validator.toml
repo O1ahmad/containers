@@ -1,0 +1,2 @@
+metrics-address = "0.0.0.0"
+beacon-node = "http://nimbus-beacon:5052"

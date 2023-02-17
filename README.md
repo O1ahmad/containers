@@ -20,7 +20,7 @@ Containerized Web3 and Cloud-Native applications
 | [erigon](./erigon) | an implementation of Ethereum (execution client), on the efficiency frontier, written in Go | [![erigon](https://img.shields.io/docker/v/0labs/erigon?color=blue)](https://hub.docker.com/repository/docker/0labs/erigon) |
 | [litecoind](./litecoin) | Node software for the Litecoin digital currency payments network | [![litecoin](https://img.shields.io/docker/v/0labs/litecoin?color=blue)](https://hub.docker.com/repository/docker/0labs/litecoin) |
 | [lodestar](./lodestar) | an open-source Ethereum Consensus client and Typescript ecosystem | [![lodestar](https://img.shields.io/docker/v/0labs/lodestar?color=blue)](https://hub.docker.com/repository/docker/0labs/lodestar) |
-| [mev-boost](./mev-boost) | middleware run by validators to access a competitive block-building market and the initial implementation of proposer-builder separation (PBS) for proof-of-stake (PoS) Ethereum | [![mev-boost](https://img.shields.io/docker/v/0labs/mev-boost?color=blue)](https://hub.docker.com/repository/docker/0labs/mev-boost) |
+| [mev-boost](./mev-boost) | a proposer-builder separation (PBS) implementation/middleware run by ETH validators to access a competitive block-building market based on Maximal Extractable Value (MEV) | [![mev-boost](https://img.shields.io/docker/v/0labs/mev-boost?color=blue)](https://hub.docker.com/repository/docker/0labs/mev-boost) |
 | [nimbus](./nimbus) | a lightweight Ethereum consensus client developed by the Status Network | [![nimbus](https://img.shields.io/docker/v/0labs/nimbus?color=blue)](https://hub.docker.com/repository/docker/0labs/nimbus) |
 
 #### Options

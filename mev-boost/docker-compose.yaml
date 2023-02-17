@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+  mev-boost:
+    build: .
+    container_name: mev-boost
+    environment: []
+    env_file:
+      - ./config/${network:-mainnet}/config.env
+    ports:
+      - 18550:18550/tcp
+    networks:
+      - shared
+    restart: unless-stopped
+
+networks:
+  shared:

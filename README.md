@@ -21,6 +21,7 @@ Containerized Web3 and Cloud-Native applications
 | [litecoind](./litecoin) | Node software for the Litecoin digital currency payments network | [![litecoin](https://img.shields.io/docker/v/0labs/litecoin?color=blue)](https://hub.docker.com/repository/docker/0labs/litecoin) |
 | [lodestar](./lodestar) | an open-source Ethereum Consensus client and Typescript ecosystem | [![lodestar](https://img.shields.io/docker/v/0labs/lodestar?color=blue)](https://hub.docker.com/repository/docker/0labs/lodestar) |
 | [mev-boost](./mev-boost) | a proposer-builder separation (PBS) implementation/middleware run by ETH validators to access a competitive block-building market based on Maximal Extractable Value (MEV) | [![mev-boost](https://img.shields.io/docker/v/0labs/mev-boost?color=blue)](https://hub.docker.com/repository/docker/0labs/mev-boost) |
+| [nethermind](./nethermind) | an Ethereum protocol execution client built on .NET | [![nethermind](https://img.shields.io/docker/v/0labs/nethermind?color=blue)](https://hub.docker.com/repository/docker/0labs/nethermind) |
 | [nimbus](./nimbus) | a lightweight Ethereum consensus client developed by the Status Network | [![nimbus](https://img.shields.io/docker/v/0labs/nimbus?color=blue)](https://hub.docker.com/repository/docker/0labs/nimbus) |
 
 #### Options

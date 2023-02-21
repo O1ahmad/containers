@@ -1,0 +1,24 @@
+version: "3.4"
+
+services:
+  nethermind:
+    build: .
+    container_name: nethermind
+    environment:
+      RUN_ARGS: "--config=/config/config.json --Metrics.Enabled=true --Metrics.ExposePort=6060"
+    ports:
+      - 8545:8545/tcp
+      - 8551:8551/tcp
+      - 6060:6060/tcp
+    networks:
+      - shared
+    volumes:
+      - ./config/${network:-mainnet}:/config
+      - "${host_data_dir:-nethermind-data}:/data"
+    restart: unless-stopped
+
+networks:
+  shared:
+
+volumes:
+  nethermind-data:

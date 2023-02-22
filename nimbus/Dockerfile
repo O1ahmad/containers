@@ -1,10 +1,7 @@
-ARG VERSION=23.1.1
-
 # ******* Stage: setup ******* #
 FROM debian:stable AS setup
 
-ARG VERSION
-ARG VERSION_SHA
+ARG VERSION=23.1.1
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -13,13 +10,10 @@ RUN apt update && apt install --yes --no-install-recommends ca-certificates buil
 WORKDIR /nimbus
 
 RUN git clone -b "v${VERSION}" https://github.com/status-im/nimbus-eth2 && cd nimbus-eth2 \
-  && make update && make nimbus_beacon_node nimbus_validator_client
+  && make update && make -j8 nimbus_beacon_node nimbus_validator_client
 
 # ******* Stage: release ******* #
 FROM debian:stable AS release
-
-ARG VERSION
-ARG VERSION_SHA
 
 RUN apt update && apt install --yes --no-install-recommends ca-certificates tini
 

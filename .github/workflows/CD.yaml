@@ -48,6 +48,8 @@ jobs:
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
             export name=$dir
             export version="$(cat $dir/version.txt)"
+            echo "Version: ${version}"
+
             export version_info=$( { docker run --rm -e RUN_ARGS=--version 0labs/$dir:$version; } 2>&1)
             export cli_args=$( { docker run --rm -e RUN_ARGS=--help 0labs/$dir:$version; } 2>&1)
             jinja -E name -E version_info -E cli_args docs/dockerhub-readme.md.j2 -o dockerhub-readme-$dir.md

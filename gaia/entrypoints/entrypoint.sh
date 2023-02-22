@@ -1,6 +1,6 @@
 #!/bin/bash
-set -eo pipefail
 
+set -eo pipefail
 
 chain_id=$CHAIN_ID
 client_moniker=${GAIA_MONIKER:-gaia-node}

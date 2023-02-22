@@ -1,4 +1,4 @@
-ARG VERSION=23.1.1_1ea102b0
+ARG VERSION=23.1.1
 
 # ******* Stage: setup ******* #
 FROM debian:stable AS setup
@@ -8,12 +8,12 @@ ARG VERSION_SHA
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update && apt install --yes --no-install-recommends ca-certificates wget
+RUN apt update && apt install --yes --no-install-recommends ca-certificates build-essential git cmake
 
 WORKDIR /nimbus
 
-RUN wget https://github.com/status-im/nimbus-eth2/releases/download/v$(echo $VERSION | cut -d '_' -f1)/nimbus-eth2_Linux_amd64_${VERSION}.tar.gz \
-  && tar -xzf nimbus-eth2_Linux_amd64_${VERSION}.tar.gz
+RUN git clone -b "v${VERSION}" https://github.com/status-im/nimbus-eth2 && cd nimbus-eth2 \
+  && make update && make nimbus_beacon_node nimbus_validator_client
 
 # ******* Stage: release ******* #
 FROM debian:stable AS release
@@ -23,7 +23,7 @@ ARG VERSION_SHA
 
 RUN apt update && apt install --yes --no-install-recommends ca-certificates tini
 
-COPY --from=setup /nimbus/nimbus-eth2_Linux_amd64_${VERSION}/build/ /usr/local/bin
+COPY --from=setup /nimbus/nimbus-eth2/build/ /usr/local/bin
 COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 
 WORKDIR /nimbus

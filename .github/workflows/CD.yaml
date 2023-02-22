@@ -21,12 +21,19 @@ jobs:
           files_ignore: |
             .github
             docs
+
+      - name: Install workflow dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install jinja-cli yq
+
       - name: Build modified application Docker images
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
             version=$(cat $dir/meta.yml | yq -r .version)
             docker build $dir/ --file $dir/Dockerfile --build-arg VERSION=$version --tag 0labs/$dir:$version
           done
+
       - name: Login to Dockerhub for release
         env:
           DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USR }}
@@ -39,13 +46,12 @@ jobs:
             version=$(cat $dir/meta.yml | yq -r .version)
             docker push 0labs/$dir:$version
           done
+
       - name: Update application Dockerhub READMEs
         env:
           DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USR }}
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PWD }}
         run: |
-          python -m pip install --upgrade pip
-          pip install jinja-cli
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
             export name=$dir
             version=$(cat $dir/meta.yml | yq -r .version)

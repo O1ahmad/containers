@@ -1,3 +1,4 @@
+---
 name: Containers Continuous-Deployment
 run-name: CD ${{ github.repository }} - ${{ github.ref }} job 🚀
 on:
@@ -23,7 +24,7 @@ jobs:
       - name: Build modified application Docker images
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            version=$(cat $dir/version.txt)
+            version=$(cat $dir/meta.yml | yq -r .version)
             docker build $dir/ --file $dir/Dockerfile --build-arg VERSION=$version --tag 0labs/$dir:$version
           done
       - name: Login to Dockerhub for release
@@ -35,7 +36,7 @@ jobs:
       - name: Publish Docker image
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            version=$(cat $dir/version.txt)
+            version=$(cat $dir/meta.yml | yq -r .version)
             docker push 0labs/$dir:$version
           done
       - name: Update application Dockerhub READMEs
@@ -47,7 +48,7 @@ jobs:
           pip install jinja-cli
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
             export name=$dir
-            export version="$(cat $dir/version.txt)"
+            version=$(cat $dir/meta.yml | yq -r .version)
             export version_info=$( { docker run --rm -e RUN_ARGS=--version 0labs/$dir:$version; } 2>&1)
             export cli_args=$( { docker run --rm -e RUN_ARGS=--help 0labs/$dir:$version; } 2>&1)
             jinja -E name -E version_info -E cli_args docs/dockerhub-readme.md.j2 -o dockerhub-readme-$dir.md

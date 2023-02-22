@@ -30,9 +30,6 @@ jobs:
                 echo "${dir}: Current version is at the latest"
               else
                 echo "Version mismatch found."
-
-                # TODO: remove once version.txt has been deprecated
-                echo ${latest_version/v/} > $dir/version.txt
                 yq -yi ".version=\"${latest_version/v/}\"" $dir/meta.yml
               fi
             fi
@@ -43,6 +40,6 @@ jobs:
         with:
           default_author: github_actor
           message: "O1bot: commiting version updates"
-          add: "*meta.yml *version.txt"
+          add: "*meta.yml"
           new_branch: app-version-updates
           push: origin app-version-updates --force

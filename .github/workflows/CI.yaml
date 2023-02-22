@@ -1,8 +1,9 @@
+---
 name: Containers Continuous-Integration
 run-name: CI ${{ github.repository }} - ${{ github.ref }} job 🚀
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
 jobs:
   Build-Test-Container-Setup:
@@ -25,7 +26,7 @@ jobs:
       - name: Build modified application Docker images
         run: |
           for dir in ${{ steps.changed-dirs.outputs.all_changed_files }}; do
-            version=$(cat $dir/version.txt)
+            version=$(cat $dir/meta.yml | yq -r .version)
             docker build $dir/ --file $dir/Dockerfile --build-arg VERSION=$version --tag 0labs/$dir:$version
           done
 

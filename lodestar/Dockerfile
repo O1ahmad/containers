@@ -1,4 +1,4 @@
-ARG VERSION=v1.4.1
+ARG VERSION=1.4.1
 
 # ******* Stage: setup ******* #
 FROM node:18-buster AS setup
@@ -17,7 +17,7 @@ RUN apt update && apt install --yes --no-install-recommends \
 
 WORKDIR /
 
-RUN git clone --depth 1 --branch ${VERSION} https://github.com/ChainSafe/lodestar.git
+RUN git clone --depth 1 --branch v${VERSION} https://github.com/ChainSafe/lodestar.git
 RUN cd lodestar && yarn install --ignore-optional && yarn run build
 
 ENV PATH="$PATH:/lodestar"

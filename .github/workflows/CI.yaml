@@ -3,7 +3,7 @@ name: Containers Continuous-Integration
 run-name: CI ${{ github.repository }} - ${{ github.ref }} job 🚀
 on:
   push:
-    branches: [main]
+    branches: [main,app-version-updates]
   pull_request:
 jobs:
   Build-Test-Container-Setup:

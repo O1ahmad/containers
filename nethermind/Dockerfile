@@ -1,30 +1,21 @@
-ARG VERSION=1.17.0-dd2f2362
+FROM debian:stable
 
-# ******* Stage: setup ******* #
-FROM debian:stable AS setup
-
-ARG VERSION
+ARG VERSION=1.17.3
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y --no-install-recommends wget unzip apt-transport-https ca-certificates
+RUN apt-get update && apt-get install -y --no-install-recommends git libsnappy-dev libc6-dev libc6 wget tini apt-transport-https ca-certificates
+
+# Install .NET dependencies
+RUN wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && dpkg -i packages-microsoft-prod.deb && rm packages-microsoft-prod.deb
+RUN apt-get update && apt-get install -y --no-install-recommends dotnet-sdk-7.0 aspnetcore-runtime-7.0
+
+RUN git clone -b "${VERSION}" --recursive https://github.com/NethermindEth/nethermind.git && cd nethermind/src/Nethermind && dotnet build Nethermind.sln -c Release
 
 WORKDIR /nethermind
 
-# Installing Nethermind
-RUN wget https://github.com/NethermindEth/nethermind/releases/download/$(echo $VERSION | cut -d '-' -f1)/nethermind-$VERSION-linux-x64.zip \
-  && unzip nethermind-$VERSION-linux-x64.zip
+ENV PATH="$PATH:/nethermind/src/Nethermind//Nethermind.Runner/bin/Release/net7.0"
 
-# ******* Stage: release ******* #
-FROM mcr.microsoft.com/dotnet/runtime:7.0
-
-WORKDIR /nethermind
-
-ENV PATH="$PATH:/nethermind"
-
-RUN apt-get update && apt-get install --yes --no-install-recommends tini apt-transport-https ca-certificates libsnappy-dev libc6-dev libc6
-
-COPY --from=setup /nethermind/ /nethermind
 COPY ./entrypoints/entrypoint.sh /entrypoint.sh
 
 # default ports

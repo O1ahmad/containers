@@ -5,7 +5,5 @@ example_config: 'https://raw.githubusercontent.com/ava-labs/avalanche-docs/maste
 
   https://raw.githubusercontent.com/ava-labs/avalanche-docs/master/docs/nodes/maintain/chain-config-flags.md
 
-  https://raw.githubusercontent.com/ava-labs/avalanche-docs/master/docs/nodes/maintain/subnet-configs.md
-
-  '
+  https://raw.githubusercontent.com/ava-labs/avalanche-docs/master/docs/nodes/maintain/subnet-configs.md'
 example_metrics: 127.0.0.1:9650/ext/metrics
